@@ -1,3 +1,4 @@
+import { Barlow, Montserrat, Russo_One } from "next/font/google";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -8,13 +9,19 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      fontFamily: {
+        Montserrat: ['"Montserrat"', "sans-serif"],
+        Hind: ['"Hind"', "sans-serif"],
+        Russo_One: ['"Russo One"', "sans-serif"],
+        Barlow: ['"Barlow"', "sans-serif"],
       },
+    colors: {
+      'mywhite': '#F6F9FC',
+      'mygreen': '#4C9A2A',
+      'myblack': '#0A2513',
     },
   },
+},
   plugins: [],
 };
 export default config;

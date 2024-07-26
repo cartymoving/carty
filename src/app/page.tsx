@@ -1,8 +1,9 @@
 import React from 'react'
+import Section1 from './shared/Section1'
 
 const page = () => {
   return (
-    <div>page</div>
+    <Section1 />
   )
 }
 

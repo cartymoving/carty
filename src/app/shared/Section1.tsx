@@ -5,10 +5,12 @@ export default async function Section1(){
   return(
     <section className="min-h-screen h-fit w-screen relative">
       <Image
-        className='absolute bottom-1/2 translate-y-2/3 md:translate-y-0 h-[360px] md:bottom-0 right-0 md:h-[55%] xl:h-[60%] 2xl:h-[70%] w-[550px] min-w-[550px] -z-10 md:z-10 md:w-fit' 
+        className='absolute bottom-1/2 translate-y-2/3 md:translate-y-0 h-[360px] md:bottom-0 right-0 md:h-[55%] xl:h-[60%] 2xl:h-[70%] w-[550px] min-w-[550px] -z-10 lg:z-10 md:w-fit' 
         src="/sec1_1.png"
         width={1158}
         height={759}
+        priority
+        unoptimized={true}
         alt="Picture of a worker"
       />  
       <div className="custom-shape absolute top-0 left-0 -z-20"></div>

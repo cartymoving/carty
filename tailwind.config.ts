@@ -9,6 +9,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        'msm': '500px',
+        '3xl': '1700px',
+      },
       fontFamily: {
         Montserrat: ['"Montserrat"', "sans-serif"],
         Hind: ['"Hind"', "sans-serif"],

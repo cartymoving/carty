@@ -7,7 +7,7 @@ const NavBar = () => {
     <nav className='top-8 absolute w-full h-fit px-[6vw] xl:px-[10vw] z-20'>
       <div className='bg-mywhite rounded-lg px-12 py-2 md:py-5 flex items-center text-nowrap justify-center lg:justify-between w-full nav'>
         <Image
-          src="/logo.svg"
+          src="/logo.png"
           width={182}
           height={64}
           alt="logo"

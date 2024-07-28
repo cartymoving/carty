@@ -15,6 +15,11 @@ body{
 
 .nav{
   box-shadow: 0px 4px 8.5px 0px rgba(0, 0, 0, 0.15);
+  transition: 0.4s all ease-in;
+}
+
+.nav.active{
+  box-shadow: none;
 }
 
 .container{
@@ -48,6 +53,10 @@ body{
 
 .h1{
   font-size: 7rem;
+}
+
+body.active{
+  overflow-y: hidden;
 }
 
 @media screen and (max-height: 1000px) {
@@ -117,3 +126,36 @@ body{
 .learnmore:hover svg path{
   fill: #4C9A2A !important;
 }
+
+.hiddenMenu.hiddenMenu-init {
+  transition: none;
+}
+
+.hiddenMenu{
+  transform-origin: center;
+  transition: 0.7s all ease-in;
+}
+
+.hiddenMenu.active{
+  top: -200px;
+  width: 200vh;
+  height: 200vh;
+}
+
+.menuel {
+  opacity: 0;
+  transition: opacity 1s ease-in, visibility 3s ease-in;
+}
+
+.menuel.active{
+  opacity: 1;
+}
+
+.menue.close{
+  transform: translateY(-200px);
+}
+
+.section3{
+  background: radial-gradient(65.28% 57.94% at 144.22% 8.58%, #1E5631 25%, #123E21 100%)
+}
+

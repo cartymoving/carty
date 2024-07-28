@@ -62,13 +62,13 @@ export default async function Section2(){
         <p className='font-medium text-sm md:text-xl xl:text-2xl text-myblack mt-6 md:mt-12 w-full md:w-3/4 2xl:w-[58%]'>Your trusted partner for all your moving needs Easily estimate your move for free. Your trusted partner for all your moving needs Easily estimate your move for free. Your trusted partner for all your moving needs Easily estimate your move for free.</p>
       </div>
       <div className='flex flex-row flex-wrap w-full justify-center md:justify-between mt-4 md:mt-16 gap-4 md:gap-6 mb-16 md:mb-8'>
-        <div className='flex flex-col w-full md:w-[calc(33.3%-1rem)] container px-4 pt-4 rounded-lg'>
-          <Image src="/sec2_1.png" alt="delivery guy" width="464" height="360" className='w-full' />
+        <div className='flex flex-col w-full md:w-[calc(33.3%-1rem)] container px-4 pt-4 rounded-lg h-auto'>
+          <Image src="/sec2_1.png" alt="delivery guy" width="464" height="360" className='w-full h-auto' />
           <h3 className='font-Montserrat font-bold text-base md:text-xl xl:text-2xl mt-3 xl:mt-4'>Local Moves</h3>
           <p className='font-Hind font-medium text-sm md:text-base xl:text-xl mt-3 xl:mt-4 mb-5'>Experience a hassle-free local move with Carty Moving Company.</p>
         </div>
-        <div className='flex flex-col w-full md:w-[calc(33.3%-1rem)] container px-4 pt-4 rounded-lg'>
-          <Image src="/sec2_2.png" alt="passing boxes in car" width="464" height="330" className='w-full' />
+        <div className='flex flex-col w-full md:w-[calc(33.3%-1rem)] container px-4 pt-4 rounded-lg h-auto'>
+          <Image src="/sec2_2.png" alt="passing boxes in car" width="464" height="330" className='w-full h-auto' />
           <h3 className='font-Montserrat font-bold text-base md:text-xl xl:text-2xl mt-3 xl:mt-4'>Long Distance Move</h3>
           <p className='font-Hind font-medium text-sm md:text-base xl:text-xl mt-3 xl:mt-4'>Let Carty Movers take the stress out of your long-distance move.</p>
           <p className='text-myblack text-sm md:text-base xl:text-xl font-bold font-Hind mt-2 cursor-pointer flex items-center gap-2 hover:text-mygreen learnmore mb-5'>Learn more 
@@ -77,8 +77,8 @@ export default async function Section2(){
             </svg>
           </p>
         </div>
-        <div className='flex flex-col w-full md:w-[calc(33.3%-1rem)] container px-4 pt-4 rounded-lg'>
-          <Image src="/sec2_3.png" alt="closing packages" width="464" height="330" className='w-full' />
+        <div className='flex flex-col w-full md:w-[calc(33.3%-1rem)] container px-4 pt-4 rounded-lg h-auto'>
+          <Image src="/sec2_3.png" alt="closing packages" width="464" height="330" className='w-full h-auto' />
           <h3 className='font-Montserrat font-bold text-base md:text-xl xl:text-2xl mt-3 xl:mt-4'>Commercial Move</h3>
           <p className='font-Hind font-medium text-sm md:text-base xl:text-xl mt-3 xl:mt-4'>Minimize downtime and keep your business operations running smoothly.</p>
           <p className='text-myblack text-sm md:text-base xl:text-xl font-bold font-Hind mt-2 cursor-pointer flex items-center gap-2 hover:text-mygreen learnmore mb-5'>Learn more 

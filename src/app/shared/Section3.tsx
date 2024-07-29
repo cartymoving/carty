@@ -24,7 +24,7 @@ export default async function Section2(){
             <Image src="/sec3_1.png" width="679" height="529" alt='Worker help' unoptimized={true} className='w-full h-full object-[40%] lg:block hidden object-cover container rounded-lg'/>
           </div>
         </div>
-        <div className='flex flex-col mt-[10vh]'>
+        <div className='flex flex-col mt-[8vh] md:mt-[10vh]'>
           <h1 className='text-mywhite font-bold font-Montserrat text-[2rem] md:text-4xl xl:text-5xl 3xl:text-[4rem] text-center'>Carty Movers Have Built Its Reputation</h1>
           <div className='flex flex-col md:flex-row xl:px-[8.5vw] gap-[3.3vw] text-mywhite mb-60 md:mb-80 mt-[6vh]'>
             <div>

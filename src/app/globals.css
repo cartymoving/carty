@@ -11,11 +11,16 @@ html{
 body{
   overflow-x: hidden;
   box-sizing: border-box;
+  background-color: #F6F9FC;
 }
 
 .nav{
   box-shadow: 0px 4px 8.5px 0px rgba(0, 0, 0, 0.15);
   transition: 0.4s all ease-in;
+}
+
+.footer{
+  background-color: (90deg, #ACDF87 -0.24%, #76BA1B 28.38%, #1E5631 99.65%);
 }
 
 .nav.active{

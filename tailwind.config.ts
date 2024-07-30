@@ -23,6 +23,7 @@ const config: Config = {
       'mywhite': '#F6F9FC',
       'mygreen': '#4C9A2A',
       'myblack': '#0A2513',
+      'mydarkgreen': '#1E5631',
     },
   },
 },

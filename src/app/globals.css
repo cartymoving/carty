@@ -129,11 +129,11 @@ body.active{
   transform: translateY(-7px) rotate(-45deg);
 }
 
-.learnmore svg path{
+.learn-more svg path{
   fill: #0A2513 !important;
 }
 
-.learnmore:hover svg path{
+.learn-more:hover svg path{
   fill: #4C9A2A !important;
 }
 
@@ -169,3 +169,46 @@ body.active{
   background: radial-gradient(65.28% 57.94% at 144.22% 8.58%, #1E5631 25%, #123E21 100%)
 }
 
+@media (min-width: 768px) {
+  .card {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .image-container {
+    position: relative;
+    height: auto;
+  }
+  
+  .image {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .content {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .card:hover .image {
+    transform: translateY(-15%);
+  }
+
+  @media (min-width: 1600px) {
+    .card:hover .image {
+      transform: translateY(-10%);
+    }
+  }
+  
+  .card:hover .content {
+    transform: translateY(-20%);
+  }
+  
+  .learn-more {
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+  }
+  
+  .card:hover .learn-more {
+    opacity: 1;
+  }
+}

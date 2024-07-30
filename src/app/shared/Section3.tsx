@@ -4,10 +4,10 @@ import Link from 'next/link'
 
 export default async function Section2(){
   return(
-    <section className='section3 w-screen h-fit min-h-screen skew-y-[-14deg] md:skew-y-[-7deg] translate-y-40'>
+    <section className='section3 w-screen h-fit min-h-screen skew-y-[-14deg] md:skew-y-[-7deg] translate-y-20 md:translate-y-40'>
       <div className='bg-mygreen w-[40vw] md:w-[14vw] h-4 md:h-8 absolute -top-4 md:-top-8 left-0'></div>
       <div className='bg-mygreen w-[40vw] md:w-[14vw] h-4 md:h-8 absolute -bottom-4 md:-bottom-8 right-0'></div>
-      <div className='w-screen relative h-fit skew-y-[14deg] md:skew-y-[7deg] translate-y-40 px-4 md:px-[10vw]'>
+      <div className='w-screen relative h-fit skew-y-[14deg] md:skew-y-[7deg] translate-y-28 md:translate-y-40 px-4 md:px-[10vw]'>
         <div className='flex gap-[7.5vw] relative'>
           <div className='flex flex-col w-full lg:w-[calc(50%-3.75vw)]'>
             <p className='text-mygreen font-bold font-Hind text-2xl'>About Us</p>

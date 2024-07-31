@@ -42,12 +42,10 @@ body{
 
 .forHoverParent:hover .forHover{
   color: #0A2513;
-  font-weight: 500;
 }
 
 .forHover:hover{
   color: #4C9A2A !important;
-  font-weight: bold !important;
 }
 
 .quote:hover svg{
@@ -212,3 +210,9 @@ body.active{
     opacity: 1;
   }
 }
+
+.el{
+  transition: all 0.8s ease-in-out;
+}
+
+

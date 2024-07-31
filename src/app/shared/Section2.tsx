@@ -64,7 +64,7 @@ export default async function Section2(){
       <div className='flex flex-row flex-wrap w-full justify-center md:justify-between mt-4 md:mt-16 gap-4 md:gap-6 mb-16 md:mb-8'>
       <div className="card flex flex-col w-full md:w-[calc(33.3%-1rem)] container px-4 pt-4 rounded-lg h-auto relative">
         <div className="image-container relative rounded-lg overflow-hidden">
-          <Image src="/sec2_1.png" alt="delivery guy" width="464" height="360" className="image w-full h-auto object-cover rounded-lg transition-all duration-300" />
+          <Image src="/sec2_1.png" alt="delivery guy" width="464" height="360" unoptimized={true} className="image w-full h-auto object-cover rounded-lg transition-all duration-300" />
         </div>
         <div className="content mt-3 xl:mt-4 transition-all duration-300">
           <h3 className="font-Montserrat font-bold text-base md:text-xl xl:text-2xl">Local Moves</h3>
@@ -80,7 +80,7 @@ export default async function Section2(){
 
       <div className="card flex flex-col w-full md:w-[calc(33.3%-1rem)] container px-4 pt-4 rounded-lg h-auto relative">
         <div className="image-container relative rounded-lg overflow-hidden">
-          <Image src="/sec2_2.png" alt="passing boxes in car" width="464" height="360" className="image w-full h-auto object-cover rounded-lg transition-all duration-300" />
+          <Image src="/sec2_2.png" alt="passing boxes in car" width="464" height="360" unoptimized={true} className="image w-full h-auto object-cover rounded-lg transition-all duration-300" />
         </div>
         <div className="content mt-3 xl:mt-4 transition-all duration-300">
           <h3 className="font-Montserrat font-bold text-base md:text-xl xl:text-2xl">Long Distance Move</h3>
@@ -95,7 +95,7 @@ export default async function Section2(){
       </div>
       <div className="card flex flex-col w-full md:w-[calc(33.3%-1rem)] container px-4 pt-4 rounded-lg h-auto relative">
         <div className="image-container relative rounded-lg overflow-hidden">
-          <Image src="/sec2_3.png" alt="closing packages" width="464" height="360" className="image w-full h-auto object-cover rounded-lg transition-all duration-300" />
+          <Image src="/sec2_3.png" alt="closing packages" width="464" height="360" unoptimized={true} className="image w-full h-auto object-cover rounded-lg transition-all duration-300" />
         </div>
         <div className="content mt-3 xl:mt-4 transition-all duration-300">
           <h3 className="font-Montserrat font-bold text-base md:text-xl xl:text-2xl">Commercial Move</h3>

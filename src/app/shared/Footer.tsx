@@ -4,9 +4,9 @@ import Link from 'next/link'
 
 export default async function Section2(){
   return(
-    <div className='w-screen h-[891px] md:h-[460px] relative overflow-hidden max-w-[1920px] mx-auto'>
+    <div className='w-screen h-[891px] md:h-[460px] relative overflow-hidden'>
       <div className='h-full w-full skew-y-12 md:skew-y-3 translate-y-[86px] footer absolute top-0'>
-        <div className='-skew-y-12 md:-skew-y-3 px-[10vw] xl:pl-[13.9vw] pt-16  xl:pr-[19.2vw] flex justify-center md:items-start md:justify-between flex-col md:flex-row'>
+        <div className='-skew-y-12 md:-skew-y-3 px-[10vw] xl:pl-[13.9vw] pt-16  xl:pr-[19.2vw] flex max-w-[1920px] mx-auto justify-center md:items-start md:justify-between flex-col md:flex-row'>
           <p className='text-xs md:text-base font-Montserrat font-medium text-mywhite absolute -bottom-20 left-[10vw] md:left-[13.9vw]'>Copyright © 2024 Cross Country Moving. All rights reserved </p>
           <Image alt='CartyMoving logo' src="/logo.png" width="153" height="54" className='footerLogo w-[153px] h-[54px] mb-16 md:mb-0'/>
           <div className='flex flex-col text-mywhite font-Barlow text-lg font-medium'>

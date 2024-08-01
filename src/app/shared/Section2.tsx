@@ -59,7 +59,7 @@ export default async function Section2(){
       <div>
         <p className='text-mygreen font-Montserrat text-xs msm:text-xl xl:text-2xl font-bold mb-[1.4vh]'>Carty Services</p>
         <h1 className='text-myblack font-bold font-Montserrat text-[2rem] md:text-5xl xl:text-[4rem]'>Full Service <br className='hidden md:block' /> Moving Company</h1>
-        <p className='font-medium text-sm md:text-xl xl:text-2xl text-myblack mt-6 md:mt-12 w-full md:w-3/4 2xl:w-[58%]'>Your trusted partner for all your moving needs Easily estimate your move for free. Your trusted partner for all your moving needs Easily estimate your move for free. Your trusted partner for all your moving needs Easily estimate your move for free.</p>
+        <p className='font-medium text-sm md:text-lg text-myblack mt-6 md:mt-12 w-full md:w-3/4 2xl:w-[58%]'>At Carty Moving Company, we pride ourselves on offering a range of comprehensive moving services tailored to meet your unique needs. Our team is dedicated to providing top-quality service and ensuring that your move is efficient. Discover our specialized services below:</p>
       </div>
       <div className='flex flex-row flex-wrap w-full justify-center md:justify-between mt-4 md:mt-16 gap-4 md:gap-6 mb-16 md:mb-8'>
       <div className="card flex flex-col w-full md:w-[calc(33.3%-1rem)] container px-4 pt-4 rounded-lg h-auto relative">

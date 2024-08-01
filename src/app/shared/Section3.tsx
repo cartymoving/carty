@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export default async function Section3(){
   return(
-    <section className='section3 w-screen h-fit min-h-screen skew-y-[-14deg] md:skew-y-[-7deg] translate-y-20 md:translate-y-40 max-w-[1920px] mx-auto'>
+    <section className='section3 w-screen h-fit min-h-screen skew-y-[-14deg] md:skew-y-[-7deg] translate-y-20 md:translate-y-40'>
       <div className='bg-mygreen w-[40vw] md:w-[14vw] h-4 md:h-8 absolute -top-4 md:-top-8 left-0'></div>
       <div className='bg-mygreen w-[40vw] md:w-[14vw] h-4 md:h-8 absolute -bottom-4 md:-bottom-8 right-0'></div>
       <div className='w-screen max-w-[1920px] mx-auto relative h-fit skew-y-[14deg] md:skew-y-[7deg] translate-y-28 md:translate-y-40 px-4 md:px-[10vw] max-padding'>

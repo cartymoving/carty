@@ -36,14 +36,14 @@ const Section5 = () => {
 
   return (
     <section className='px-4 md:px-[10vw] w-screen h-fit mt-[11vh] max-w-[1920px] mx-auto'>
-      <div>
+      <div className='mb-[5.9vh]'>
         <p className='text-mygreen text-2xl font-Montserrat font-bold'>All Review</p>
         <h1 className='text-[4rem] text-myblack font-Montserrat font-bold'>Client Review</h1>
       </div>
-      <div className='bg-white rounded-xl container pt-7 pb-[calc(4vh+40px)] px-[1.6vw] h-fit relative overflow-hidden'>
+      <div className='bg-white rounded-xl container pt-7 pb-[calc(2.3vh+25px)] px-[1.6vw] h-fit relative overflow-hidden'>
         <Slider {...settings} className='h-full'>
           {[0, 1, 2].map((pageIndex) => (
-            <div key={pageIndex} className='w-full h-full text-mywhite flex flex-wrap justify-between gap-8 pb-[calc(4vh+60px)] outline-none realflex px-[1.6vw]'>
+            <div key={pageIndex} className='w-full h-full text-mywhite flex flex-wrap justify-between gap-8 pb-[calc(1.4vh+16px)] outline-none realflex px-[1.6vw]'>
               {reviews.slice(pageIndex * 4, pageIndex * 4 + 4).map((review, index) => (
                 <div key={index} className='bg-mydarkgreen !flex flex-col rounded-xl py-11 px-[1.6vw] w-[calc(50%-1rem)]'>
                   <Stars />

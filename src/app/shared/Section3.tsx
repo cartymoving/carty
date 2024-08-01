@@ -4,11 +4,11 @@ import Link from 'next/link'
 
 export default async function Section3(){
   return(
-    <section className='section3 w-screen h-fit min-h-screen skew-y-[-14deg] md:skew-y-[-7deg] translate-y-20 md:translate-y-40'>
+    <section className='section3 w-screen h-fit min-h-screen skew-y-[-14deg] md:skew-y-[-7deg] translate-y-20 md:translate-y-40 max-w-[1920px] mx-auto'>
       <div className='bg-mygreen w-[40vw] md:w-[14vw] h-4 md:h-8 absolute -top-4 md:-top-8 left-0'></div>
       <div className='bg-mygreen w-[40vw] md:w-[14vw] h-4 md:h-8 absolute -bottom-4 md:-bottom-8 right-0'></div>
-      <div className='w-screen relative h-fit skew-y-[14deg] md:skew-y-[7deg] translate-y-28 md:translate-y-40 px-4 md:px-[10vw]'>
-        <div className='flex gap-[9.3vw] relative md:px-[6vw]'>
+      <div className='w-screen max-w-[1920px] mx-auto relative h-fit skew-y-[14deg] md:skew-y-[7deg] translate-y-28 md:translate-y-40 px-4 md:px-[10vw] max-padding'>
+        <div className='flex gap-[9.3vw] max-gap relative md:px-[6vw] second-max-padding'>
           <div className='flex flex-col w-full lg:w-[calc(65%-3.75vw)]'>
             <p className='text-mygreen font-bold font-Hind text-2xl'>About Us</p>
             <h1 className='text-mywhite font-bold font-Montserrat text-[2rem] md:text-5xl 3xl:text-[4rem] mt-4 mb-6 md:mb-12'>Why Carty Movers Is Your Best Choice</h1>

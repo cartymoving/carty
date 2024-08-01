@@ -55,7 +55,7 @@ const NavBar = () => {
   }, []);
   
   return (
-    <nav className='top-8 absolute w-full h-fit px-[16px] md:px-[6vw] xl:px-[10vw] z-20'>
+    <nav className='top-8 absolute w-full h-fit px-[16px] md:px-[6vw] xl:px-[10vw] z-20 max-w-[1920px] left-1/2 -translate-x-1/2'>
     <div className='lg:hidden absolute left-1/2 top-2 -translate-x-1/2 bg-mywhite rounded-full w-2 h-2 close hiddenMenu'>
       <div className='gap-[2.2vh] text-[2rem] font-bold flex xL:hidden absolute left-1/2 -translate-x-1/2 top-[calc(242px+10vh)] flex-col lg:hidden text-nowrap font-Montserrat justify-center items-start menuel'>
         <Link href="#" className='text-mygreen transition-all font-bold'>Home</Link>

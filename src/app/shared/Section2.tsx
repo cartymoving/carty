@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default async function Section2(){
   return(
-    <section className="min-h-screen h-fit w-screen relative mt-16 px-4 md:px-[10vw]">
+    <section className="min-h-screen h-fit w-screen relative mt-16 px-4 md:px-[10vw] max-w-[1920px] mx-auto">
       <div className='flex flex-wrap md:px-[5.9vw] font-Barlow font-bold mb-[6vh] text-2xl justify-center items-center lg:text-[2rem] text-myblack'>
         <div className='flex flex-row gap-4 md:w-1/4 w-2/4 md:justify-center items-center'>
           <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className='size-9 sm:size-12'>

@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default async function Section1(){
   return(
-    <section className="min-h-screen h-fit w-screen relative">
+    <section className="min-h-screen h-fit w-screen relative max-w-[1920px] mx-auto">
       <Image
         className='absolute bottom-1/2 translate-y-2/3 md:translate-y-0 h-[360px] md:bottom-0 right-0 md:h-[55%] xl:h-[60%] 2xl:h-[70%] w-[550px] min-w-[550px] -z-10 lg:z-10 md:w-fit' 
         src="/sec1_1.png"

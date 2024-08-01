@@ -128,6 +128,15 @@ body.active{
 
   .h1{
     font-size: 3rem;
+    margin-bottom: 300px;
+  }
+
+  .realflex .del:last-of-type{
+    display: none !important;
+  }
+  
+  .realflex .del:nth-child(3){
+    display: none !important;
   }
 }
 
@@ -240,4 +249,3 @@ body.active{
 .slick-dots.custom-dots li.slick-active div {
   background-color: #4C9A2A;
 }
-

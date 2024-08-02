@@ -44,7 +44,7 @@ const Section2Images = () => {
         { src: '/sec2_3.png', alt: 'closing packages', title: 'Commercial Move', desc: 'Minimize downtime and keep your business operations running smoothly.' },
       ].map(({ src, alt, title, desc }, index) => (
         <motion.div
-          className="card flex flex-col w-full md:w-[calc(33.3%-1rem)] container px-4 pt-4 rounded-lg h-auto relative"
+          className="card flex flex-col w-full bg-white md:w-[calc(33.3%-1rem)] container px-4 pt-4 rounded-lg h-auto relative"
           key={index}
           variants={item}
           transition={{ duration: 0.3 }}

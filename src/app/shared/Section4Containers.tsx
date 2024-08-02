@@ -33,7 +33,7 @@ const Section4Containers = () => {
   return (
     <>
     <motion.div className='flex flex-col items-center gap-12 mt-16' ref={ref} variants={list} animate={isInView ? 'show' : 'hide'} transition={{ duration: 0.3 }}>
-        <motion.div className='container bg-mywhite pb-7 pt-14 px-4 xl:px-12 w-full md:w-[48%] rounded-xl relative border-[1px] border-mygreen flex flex-col' variants={item} transition={{ duration: 0.3 }}>
+        <motion.div className='container bg-white pb-7 pt-14 px-4 xl:px-12 w-full md:w-[48%] rounded-xl relative border-[1px] border-mygreen flex flex-col' variants={item} transition={{ duration: 0.3 }}>
           <div className='w-full h-fit bg-mygreen text-mywhite text-center font-Montserrat font-bold text-sm py-[6px] absolute top-[-2px] left-0 rounded-tr-xl flex justify-center gap-1 rounded-tl-xl'>Most popular
             <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M7.29869 16.9473C7.14067 16.9483 6.98611 16.9011 6.85566 16.8119C6.7252 16.7228 6.62506 16.5959 6.56863 16.4483L5.3192 13.2125C5.29389 13.1473 5.25524 13.0881 5.20572 13.0387C5.15619 12.9893 5.09689 12.9508 5.03162 12.9257L1.79148 11.6842C1.64388 11.6278 1.51686 11.5279 1.42719 11.3979C1.33751 11.2678 1.28938 11.1135 1.28917 10.9555C1.28895 10.7975 1.33665 10.6432 1.42597 10.5128C1.5153 10.3825 1.64204 10.2823 1.78948 10.2255L5.02528 8.97603C5.09048 8.95073 5.14967 8.91207 5.19906 8.86255C5.24845 8.81302 5.28694 8.75372 5.31207 8.68845L6.55357 5.44831C6.60999 5.30072 6.70983 5.1737 6.83993 5.08402C6.97002 4.99434 7.12425 4.94621 7.28226 4.946C7.44027 4.94578 7.59463 4.99348 7.72497 5.08281C7.85531 5.17213 7.9555 5.29887 8.01232 5.44631L9.26175 8.68211C9.28706 8.74731 9.32571 8.80651 9.37523 8.85589C9.42476 8.90528 9.48406 8.94378 9.54933 8.9689L12.7698 10.2029C12.9234 10.2596 13.0558 10.3623 13.1489 10.4969C13.2421 10.6315 13.2915 10.7916 13.2905 10.9553C13.2883 11.1106 13.2396 11.2616 13.1506 11.3889C13.0617 11.5162 12.9365 11.6138 12.7915 11.6692L9.55568 12.9186C9.49047 12.9439 9.43128 12.9825 9.38189 13.0321C9.3325 13.0816 9.29401 13.1409 9.26888 13.2062L8.02738 16.4463C7.97135 16.5941 7.87156 16.7212 7.74135 16.8107C7.61114 16.9002 7.4567 16.9479 7.29869 16.9473Z" fill="white"/>
@@ -121,11 +121,11 @@ const Section4Containers = () => {
             </div>
           </div>
           <div className='w-full h-auto flex justify-center mt-12'>
-            <Link className='text-mywhite text-xs md:text-base font-bold font-Montserrat w-full lg:w-fit text-center bg-mygreen rounded-[4px] border-2 border-mygreen py-[10px] lg:px-[124px] md:hover:bg-mywhite md:hover:text-mygreen transition-all' href="#">Get a Quote</Link>
+            <Link className='text-mywhite text-xs md:text-base font-bold font-Montserrat w-full lg:w-fit text-center bg-mygreen rounded-[4px] border-2 border-mygreen py-[10px] lg:px-[124px] md:hover:bg-white md:hover:text-mygreen transition-all' href="#">Get a Quote</Link>
           </div>
         </motion.div>
         <div className='flex md:flex-row flex-col w-full items-center md:items-start justify-center gap-12'>
-          <motion.div className='container bg-mywhite py-7 px-4 xl:px-12 md:w-[48%] rounded-xl' variants={item} transition={{ duration: 0.3 }}>
+          <motion.div className='container bg-white py-7 px-4 xl:px-12 md:w-[48%] rounded-xl' variants={item} transition={{ duration: 0.3 }}>
           <div className='w-full h-auto flex sm:flex-row flex-col justify-between'>
             <div>
               <h3 className='font-Montserrat text-mydarkgreen font-bold text-xl'>2 Movers & Truck</h3>
@@ -206,10 +206,10 @@ const Section4Containers = () => {
             </div>
           </div>
           <div className='w-full h-auto flex justify-center mt-12'>
-            <Link className='text-mywhite text-xs md:text-base font-bold font-Montserrat w-full lg:w-fit text-center bg-mydarkgreen rounded-[4px] border-2 border-mydarkgreen py-[10px] lg:px-[124px] md:hover:bg-mywhite md:hover:text-mydarkgreen transition-all' href="#">Get a Quote</Link>
+            <Link className='text-mywhite text-xs md:text-base font-bold font-Montserrat w-full lg:w-fit text-center bg-mydarkgreen rounded-[4px] border-2 border-mydarkgreen py-[10px] lg:px-[124px] md:hover:bg-white md:hover:text-mydarkgreen transition-all' href="#">Get a Quote</Link>
           </div>
           </motion.div>
-          <motion.div className='container bg-mywhite py-7 px-4 xl:px-12 md:w-[48%] rounded-xl' variants={item} transition={{ duration: 0.3 }}>
+          <motion.div className='container bg-white py-7 px-4 xl:px-12 md:w-[48%] rounded-xl' variants={item} transition={{ duration: 0.3 }}>
           <div className='w-full h-auto flex justify-between sm:flex-row flex-col'>
             <div>
               <h3 className='font-Montserrat text-mydarkgreen font-bold text-xl'>4 Movers & Truck</h3>
@@ -290,7 +290,7 @@ const Section4Containers = () => {
             </div>
           </div>
           <div className='w-full h-auto flex justify-center mt-12'>
-            <Link className='text-mywhite text-xs md:text-base font-bold font-Montserrat w-full lg:w-fit text-center bg-mydarkgreen rounded-[4px] border-2 border-mydarkgreen py-[10px] lg:px-[124px] md:hover:bg-mywhite md:hover:text-mydarkgreen transition-all' href="#">Get a Quote</Link>
+            <Link className='text-mywhite text-xs md:text-base font-bold font-Montserrat w-full lg:w-fit text-center bg-mydarkgreen rounded-[4px] border-2 border-mydarkgreen py-[10px] lg:px-[124px] md:hover:bg-white md:hover:text-mydarkgreen transition-all' href="#">Get a Quote</Link>
           </div>
           </motion.div>
         </div>

@@ -22,8 +22,8 @@ body{
 }
 
 .footer{
-  background: rgb(172,223,135);
-  background: linear-gradient(225deg, rgba(172,223,135,1) 0%, rgba(118,186,27,1) 29%, rgba(30,86,49,1) 100%);
+  background: rgb(118,186,28);
+  background: linear-gradient(225deg, rgba(118,186,28,1) 0%, rgba(38,95,48,1) 100%);
 }
 
 .footerLogo{
@@ -59,6 +59,13 @@ body{
   width: 100%;
   transform: skewY(-3.5deg) translateY(-18%);
   background: linear-gradient(90deg, #275E2C, #76BA1C, #A0D76E);
+}
+
+.custom-shape-v2{
+  height: 98%;
+  width: 100%;
+  transform: skewY(-3.5deg) translateY(-18%);
+  background: radial-gradient(80.59% 62.79% at 70.24% 32.36%, #1E5631 24.5%, #123E21 100%), linear-gradient(258deg, #ACDF87 -10.96%, #76BA1B 42.3%, #1C512E 94.72%);
 }
 
 .h1{
@@ -126,6 +133,10 @@ body.active{
     transform: skewY(-14deg) translateY(-18%);
   }
 
+  .custom-shape-v2{
+    transform: skewY(-14deg) translateY(-18%);
+  }
+
   .h1{
     font-size: 3rem;
     margin-bottom: 300px;
@@ -172,7 +183,7 @@ body.active{
 
 .hiddenMenu{
   transform-origin: center;
-  transition: 0.7s all ease-in;
+  transition: 0.4s all ease-in;
 }
 
 .hiddenMenu.active{
@@ -183,7 +194,7 @@ body.active{
 
 .menuel {
   opacity: 0;
-  transition: opacity 1s ease-in, visibility 3s ease-in;
+  transition: opacity 0.5s ease-in, visibility 2s ease-in;
 }
 
 .menuel.active{

@@ -1,6 +1,5 @@
 import React from 'react'
 import Image from 'next/image'
-import Formular from './Formular'
 
 export default async function Section1(){
   return(
@@ -15,9 +14,8 @@ export default async function Section1(){
         alt="Picture of a worker"
       />  
       <div className="custom-shape absolute top-0 left-0 -z-20"></div>
-      <div className='min-h-screen h-fit md:w-full px-4 md:px-[10vw] relative flex flex-col gap-[8.8vh] pt-[100px] md:pt-[calc(10vh+108px)] max-w-[1920px] mx-auto'>
+      <div className='min-h-screen h-fit md:w-full px-4 md:px-[10vw] relative flex flex-col gap-[8.8vh] pt-[100px] md:pt-[calc(8.8vh+96px)] max-w-[1920px] mx-auto'>
         <h1 className='text-mywhite h1 w-fit font-Montserrat font-bold leading-tight text-nowrap'>Carty Cares:<br /> Your Premier<br /> Moving Solution</h1>
-        <Formular />
       </div>
     </section>
   )

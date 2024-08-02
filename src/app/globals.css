@@ -62,7 +62,6 @@ body{
 }
 
 .custom-shape-v2{
-  height: 98%;
   width: 100%;
   transform: skewY(-3.5deg) translateY(-18%);
   background: radial-gradient(80.59% 62.79% at 70.24% 32.36%, #1E5631 24.5%, #123E21 100%), linear-gradient(258deg, #ACDF87 -10.96%, #76BA1B 42.3%, #1C512E 94.72%);

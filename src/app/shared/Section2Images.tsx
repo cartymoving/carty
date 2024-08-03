@@ -61,7 +61,7 @@ const Section2Images = () => {
           </div>
           <div className="content mt-3 xl:mt-4 transition-all duration-300">
             <h3 className="font-Montserrat font-bold text-base md:text-xl xl:text-2xl">{title}</h3>
-            <p className="font-Hind font-medium text-sm md:text-base xl:text-xl mt-3 xl:mt-4 md:mb-5">{desc}</p>
+            <p className="font-Hind font-medium text-sm md:text-base xl:text-lg mt-3 xl:mt-4 md:mb-5">{desc}</p>
           </div>
           <p className="learn-more text-myblack text-sm md:text-base xl:text-xl font-bold font-Hind cursor-pointer flex items-center gap-2 hover:text-mygreen md:absolute bottom-0 left-0 right-0 py-3 md:px-4 opacity-100 md:opacity-0 transition-all duration-300">
             Learn more 

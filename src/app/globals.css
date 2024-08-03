@@ -54,6 +54,14 @@ body{
   fill:#4C9A2A;
 }
 
+.quote:hover svg path{
+  fill:#4C9A2A;
+}
+
+.overlay{
+  background-color: rgba(10, 37, 19, 0.70);
+}
+
 .custom-shape{
   height: 73.5%;
   width: 100%;
@@ -259,3 +267,10 @@ body.active{
 .slick-dots.custom-dots li.slick-active div {
   background-color: #4C9A2A;
 }
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 50%;
+    
+}
+

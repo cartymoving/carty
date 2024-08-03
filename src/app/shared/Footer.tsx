@@ -6,7 +6,7 @@ export default async function Section2(){
   return(
     <div className='w-screen h-[891px] md:h-[460px] relative overflow-hidden'>
       <div className='h-full w-full translate-y-[86px] footer absolute top-0'>
-        <div className='px-4 md:px-[5vw] lg:px-[10vw] pt-16 flex max-w-[1920px] mx-auto justify-center md:items-start md:justify-between flex-col md:flex-row'>
+        <div className='mx-4 md:mx-[5vw] lg:mx-[10vw] pt-16 flex max-w-[1920px] pb-12 md:pb-10 border-b-2 5xl:mx-auto justify-center md:items-start md:justify-between flex-col md:flex-row'>
           <div className='flex flex-col gap-6'>
             <Image alt='CartyMoving logo' src="/logo.png" width="153" height="54" className='footerLogo w-[182px] h-[64px] md:mb-0'/>
             <p className='font-Hind text-base text-[#f1f1f1] xl:text-lg font-medium md:max-w-[353px]'>We will treat your belongings with the same care as if they were our own.</p>
@@ -63,6 +63,7 @@ export default async function Section2(){
             </div>
           </div>
         </div>
+        <p className='w-full text-center text-mywhite font-Hind font-medium mt-4'>Copyright © 2024 Carty Moving & Storage. All rights reserved </p>
       </div>
     </div>
   )

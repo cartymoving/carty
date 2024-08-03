@@ -121,7 +121,7 @@ const Section4Containers = () => {
             </div>
           </div>
           <div className='w-full h-auto flex justify-center mt-12'>
-            <Link className='text-mywhite text-xs md:text-base font-bold font-Montserrat w-full lg:w-fit text-center bg-mygreen rounded-[4px] border-2 border-mygreen py-[10px] lg:px-[124px] md:hover:bg-white md:hover:text-mygreen transition-all' href="#">Get a Quote</Link>
+            <Link className='text-mywhite text-xs md:text-base font-bold font-Montserrat w-full lg:w-fit text-center bg-mygreen rounded-[4px] border-2 border-mygreen py-[10px] lg:px-[124px] md:hover:bg-white md:hover:text-mygreen transition-all uppercase' href="#">Get a Quote</Link>
           </div>
         </motion.div>
         <div className='flex md:flex-row flex-col w-full items-center md:items-start justify-center gap-12'>
@@ -206,7 +206,7 @@ const Section4Containers = () => {
             </div>
           </div>
           <div className='w-full h-auto flex justify-center mt-12'>
-            <Link className='text-mywhite text-xs md:text-base font-bold font-Montserrat w-full lg:w-fit text-center bg-mydarkgreen rounded-[4px] border-2 border-mydarkgreen py-[10px] lg:px-[124px] md:hover:bg-white md:hover:text-mydarkgreen transition-all' href="#">Get a Quote</Link>
+            <Link className='text-mywhite text-xs md:text-base font-bold font-Montserrat w-full lg:w-fit text-center bg-mydarkgreen rounded-[4px] border-2 border-mydarkgreen py-[10px] lg:px-[124px] md:hover:bg-white md:hover:text-mydarkgreen transition-all uppercase' href="#">Get a Quote</Link>
           </div>
           </motion.div>
           <motion.div className='container bg-white py-7 px-4 xl:px-12 md:w-[48%] rounded-xl' variants={item} transition={{ duration: 0.3 }}>
@@ -290,7 +290,7 @@ const Section4Containers = () => {
             </div>
           </div>
           <div className='w-full h-auto flex justify-center mt-12'>
-            <Link className='text-mywhite text-xs md:text-base font-bold font-Montserrat w-full lg:w-fit text-center bg-mydarkgreen rounded-[4px] border-2 border-mydarkgreen py-[10px] lg:px-[124px] md:hover:bg-white md:hover:text-mydarkgreen transition-all' href="#">Get a Quote</Link>
+            <Link className='text-mywhite text-xs md:text-base font-bold font-Montserrat w-full lg:w-fit text-center bg-mydarkgreen rounded-[4px] border-2 border-mydarkgreen py-[10px] lg:px-[124px] md:hover:bg-white md:hover:text-mydarkgreen transition-all uppercase' href="#">Get a Quote</Link>
           </div>
           </motion.div>
         </div>

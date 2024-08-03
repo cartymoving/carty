@@ -14,6 +14,7 @@ const config: Config = {
         'msm': '500px',
         '3xl': '1700px',
         '4xl': '1840px',
+        '5xl': '1930px',
       },
       fontFamily: {
         Montserrat: ['"Montserrat"', "sans-serif"],

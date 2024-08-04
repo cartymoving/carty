@@ -10,7 +10,7 @@ export default async function Section3(){
       <div className='w-screen max-w-[1920px] mx-auto relative h-fit skew-y-[14deg] md:skew-y-[7deg] translate-y-28 md:translate-y-40 px-4 md:px-[10vw] max-padding'>
         <div className='flex gap-[9.3vw] max-gap relative md:px-[6vw] second-max-padding'>
           <div className='flex flex-col justify-center w-full lg:w-[calc(81%-3.75vw)]'>
-            <p className='text-mygreen font-bold font-Hind text-2xl'>About Us</p>
+            <p className='text-mygreen font-bold font-Hind text-2xl mt-10'>About Us</p>
             <h1 className='text-mywhite font-bold font-Montserrat text-[2rem] md:text-5xl 3xl:text-[4rem] mt-4 mb-6 md:mb-12'>Why Carty Movers Is Your Best Choice</h1>
             <p className='text-mywhite font-Hind font-medium text-sm md:text-lg mb-8 md:mb-16'>At Carty Moving Company, we don’t just move boxes; we move lives. Our mission is to provide moving services that cater to your needs, ensuring a smooth transition to your new location. Trust us to handle your move with care, efficiency, and professionalism.</p>
             <Link href="#" className='quote w-fit flex justify-center gap-2 px-4 text-xs items-center md:text-base py-2 xl:py-[15px] xl:px-7 bg-mygreen mr-4 md:hover:bg-mywhite border-mygreen border-2 rounded-md font-Montserrat text-mywhite  md:hover:text-mygreen font-bold transition-all'>
@@ -25,7 +25,7 @@ export default async function Section3(){
           </div>
         </div>
         <div className='flex flex-col mt-[8vh] md:mt-[13vh]'>
-          <h1 className='text-mywhite font-bold font-Montserrat text-[2rem] md:text-4xl xl:text-5xl 3xl:text-[4rem] text-center'>Carty Movers Have Built It’s Reputation</h1>
+          <h1 className='text-mywhite font-bold font-Montserrat text-[2rem] md:text-4xl xl:text-5xl 3xl:text-[4rem] md:text-center'>Carty Movers Have Built It’s Reputation</h1>
           <div className='flex flex-col md:flex-row xl:px-[8.5vw] gap-[3.3vw] text-mywhite mb-60 md:mb-80 mt-[6vh]'>
             <div>
               <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">

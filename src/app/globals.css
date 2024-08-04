@@ -129,7 +129,7 @@ body.active{
 
 @media screen and (max-width: 1024px) {
   .h1{
-    font-size: 4.1rem;
+    font-size: 3.4rem;
     margin-bottom: 10px;
   }
 }
@@ -274,3 +274,22 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     
 }
 
+.path {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  transition: stroke-dashoffset 1s ease;
+}
+
+.animate-path {
+  stroke-dashoffset: 0;
+}
+
+.circle {
+  stroke-dasharray: 491.52;
+  stroke-dashoffset: 491.52;
+  transition: stroke-dashoffset 0.7s ease;
+}
+
+.animate-circle {
+  stroke-dashoffset: 0;
+}

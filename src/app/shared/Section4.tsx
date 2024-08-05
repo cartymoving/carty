@@ -3,7 +3,7 @@ import Section4Containers from './Section4Containers'
 
 export default async function Section4(){
   return(
-    <section className='mt-[calc(16vh+175px)] h-fit w-screen px-4 md:px-[10vw] max-w-[1920px] mx-auto'>
+    <section id='sec4' className='mt-[calc(16vh+175px)] h-fit w-screen px-4 md:px-[10vw] max-w-[1920px] mx-auto'>
       <div className='flex gap-6 md:gap-[5vw] xl:gap-[6.5vw] 2xl:gap-[9.1vw] md:items-center flex-col md:flex-row'>
         <div className='flex flex-col gap-4 md:gap-[2.2vh] md:w-[43%]'>
           <p className='font-Montserrat text-mygreen font-bold text-sm md:text-xl xl:text-2xl'>Detailed Prices</p>

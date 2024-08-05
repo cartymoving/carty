@@ -63,7 +63,7 @@ export default async function Section2(){
             </div>
           </div>
         </div>
-        <p className='w-full text-center text-mywhite font-Hind font-medium mt-4'>Copyright © 2024 Carty Moving & Storage. All rights reserved </p>
+        <p className='w-full text-center text-mywhite font-Hind font-medium mt-4 px-4'>Copyright © 2024 Carty Moving & Storage. All rights reserved </p>
       </div>
     </div>
   )

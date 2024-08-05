@@ -1,12 +1,12 @@
 import Link from 'next/link'
 import React from 'react'
 import Image from 'next/image'
+import QuoteBtn from '../shared/QuoteBtn'
 
 
 const page = () => {
   return (
     <section className='min-h-screen h-fit w-screen relative -mb-20 md:mb-0'>
-      {/* <div className="custom-shape-v2 h-screen absolute top-0 left-0 -z-20"></div> */}
       <div className='min-h-screen custom-shape-v2 h-fit md:w-full relative  pt-[100px] md:pt-[calc(8.8vh+96px)]'>
         <div className='skew-y-[14deg] md:skew-y-[3.5deg] pt-[calc(8.8vh+146px)] lg:pt-[calc(8.8vh+96px)] max-w-[1920px] mx-auto px-4 md:px-[10vw]'>
           <div className='w-full lg:w-1/2 h-full'>
@@ -14,13 +14,10 @@ const page = () => {
             <p className='font-Hind font-medium text-mywhite text-base xl:text-lg mt-[4.4vh] mb-[2.2vh]'>
             We value your questions, feedback, and inquiries. Whether you’re planning your next move, need a quote, or just want to learn more about our services, our team is here to assist you every step of the way. Reach out to us using the contact details below.
             </p>
-            <Link href="#" className='quote flex gap-2 px-4 py-2 xl:py-[15px] xl:px-7 bg-mygreen mr-4 hover:bg-mywhite w-fit border-mygreen border-2 rounded-md font-Montserrat text-mywhite hover:text-mygreen font-bold transition-all'>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M21.6635 7.93127C21.1376 6.67626 20.3726 5.53554 19.4111 4.57268C18.4525 3.60816 17.3138 2.8413 16.0596 2.31565C14.7748 1.77454 13.3943 1.49718 12.0002 1.50002H11.9533C10.5354 1.50705 9.16427 1.7883 7.87286 2.34143C6.62944 2.87247 5.50139 3.64069 4.55177 4.60315C3.59958 5.56384 2.84335 6.70057 2.32521 7.95002C1.78736 9.24931 1.51482 10.6431 1.52364 12.0492C1.53068 13.6758 1.91974 15.2906 2.6463 16.7344V20.2969C2.6463 20.8922 3.12911 21.375 3.72208 21.375H7.27989C8.73038 22.107 10.331 22.4921 11.9557 22.5H12.0049C13.4065 22.5 14.7635 22.2281 16.0432 21.6961C17.291 21.1767 18.4255 20.4188 19.383 19.4649C20.3486 18.5063 21.108 17.386 21.6401 16.1367C22.1908 14.843 22.4721 13.4672 22.4791 12.0469C22.4838 10.6196 22.2072 9.2344 21.6635 7.93127ZM7.32208 13.125C6.70333 13.125 6.19943 12.6211 6.19943 12C6.19943 11.3789 6.70333 10.875 7.32208 10.875C7.94083 10.875 8.44474 11.3789 8.44474 12C8.44474 12.6211 7.94318 13.125 7.32208 13.125ZM12.0002 13.125C11.3815 13.125 10.8776 12.6211 10.8776 12C10.8776 11.3789 11.3815 10.875 12.0002 10.875C12.619 10.875 13.1229 11.3789 13.1229 12C13.1229 12.6211 12.619 13.125 12.0002 13.125ZM16.6783 13.125C16.0596 13.125 15.5557 12.6211 15.5557 12C15.5557 11.3789 16.0596 10.875 16.6783 10.875C17.2971 10.875 17.801 11.3789 17.801 12C17.801 12.6211 17.2971 13.125 16.6783 13.125Z"/>
-              </svg>
-              GET A QUOTE
-            </Link>
-            <div className='flex lg:flex-row flex-col gap-2 md:gap-12 text-mywhite mt-6 md:mt-[5.9vh] pb-12'>
+            <div className='max-w-[230px]'>
+              <QuoteBtn />
+            </div>
+            <div className='flex justify-between md:justify-normal gap-2 md:gap-12 text-mywhite mt-6 md:mt-[5.9vh] pb-12'>
               <div className='flex flex-col'>
               <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M32 47.58C36.4183 47.58 40 43.9983 40 39.58C40 35.1617 36.4183 31.58 32 31.58C27.5817 31.58 24 35.1617 24 39.58C24 43.9983 27.5817 47.58 32 47.58Z" fill="#1E5631"/>
@@ -69,7 +66,7 @@ const page = () => {
           </div>
           <div className='w-1/2 h-full hidden lg:flex justify-center items-center'></div>
         </div>
-          <Image src="/sec_contacte.png" alt="worker" width="592" height="923" unoptimized={true} className='absolute h-[40%] sm:h-2/3 lg:h-[75%] 2xl:h-[85%] w-auto bottom-0 ulsm:-bottom-[50px] md:-bottom-[200px] skew-y-[14deg] md:skew-y-[3.5deg] right-0 lg:right-[10vw] -z-10'/>
+          <Image src="/sec_contacte.png" alt="worker" width="592" height="923" unoptimized={true} className='absolute h-[30%] sm:h-2/3 lg:h-[75%] 2xl:h-[85%] w-auto -bottom-[200px] skew-y-[14deg] md:skew-y-[3.5deg] left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:right-0 lg:right-[10vw] -z-10'/>
       </div>
     </section>
   )

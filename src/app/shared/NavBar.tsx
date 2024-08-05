@@ -101,7 +101,7 @@ const NavBar = () => {
   const getLinkClass = (path: string) => pathname === path ? 'text-mygreen font-bold transition-all' : 'transition-all font-medium';
 
   return (
-    <nav className='top-8 fixed left-1/2 -translate-x-1/2 w-full h-fit px-[16px] md:px-[6vw] xl:px-[10vw] z-[60] max-w-[1920px]'>
+    <nav className='top-8 fixed left-1/2 -translate-x-1/2 w-full h-fit px-[16px] md:px-[6vw] xl:px-[10vw] z-[60]'>
       <div className='lg:hidden absolute left-1/2 top-2 -translate-x-1/2 bg-mywhite rounded-full w-2 h-2 close hiddenMenu'>
         <div className={`gap-4 text-[2rem] -mt-40 font-medium xL:hidden absolute left-1/2 w-screen h-[100dvh] px-4 -translate-x-1/2 top-[292px] flex-col lg:hidden text-nowrap font-Montserrat flex items-start justify-end menuel ${!isMenuVisible ? 'pointer-events-none' : 'pointer-events-auto'}`}>
           <Link href="/" className={getLinkClass('/')}>Home</Link>

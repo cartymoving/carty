@@ -39,7 +39,7 @@ const Overlay:React.FC<ActionProps> = ({ isOpen, onClose }) => {
   return (
     <>
       {isOpen ? (
-        <div className='fixed overlay z-50 flex items-center justify-center top-0 left-0 w-screen h-screen bg-[rgba(10, 37, 19, 0.70)]'>
+        <div className='fixed overlay z-[100] flex items-center justify-center -top-8 left-0 w-[100dvw] right-0 h-[calc(100dvh+32px)] bg-[rgba(10, 37, 19, 0.70)]'>
           <div className={`bg-mywhite w-[320px] md:w-[800px] 2xl:h-[629px] rounded-lg py-12 md:py-4 2xl:py-16 md:px-32 justify-between flex flex-col relative overflow-hidden`}>
             <div className='absolute top-4 md:top-6 right-4 md:right-6 cursor-pointer' onClick={goBack}>
               <div className='w-6 h-1 bg-myblack rounded-2xl translate-y-1 rotate-45'></div>

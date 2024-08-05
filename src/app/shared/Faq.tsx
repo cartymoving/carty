@@ -40,7 +40,10 @@ const Faq = () => {
             onClick={() => toggleAccordion(index)}
           >
             <span className='flex items-center gap-3 md:gap-4'>
-              <span className='text-sm'>&#9654;</span>
+              <span className='text-sm'><svg width="9" height="12" viewBox="0 0 9 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M9 6L-4.89399e-07 11.1962L-3.51373e-08 0.803847L9 6Z" fill="#F6F9FC"/>
+                                        </svg>
+              </span>
               {faq.question}
             </span>
             <span className={`transition-all ${openIndex === index ? 'rotate-90' : ''}`}>

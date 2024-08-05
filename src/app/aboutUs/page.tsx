@@ -11,7 +11,7 @@ const page = () => {
     <>
         <section className="h-fit w-screen relative">
           <Image
-            className='absolute bottom-1/2 translate-y-2/3 md:translate-y-0 md:bottom-0 right-4 md:right-[10vw] -z-10 lg:z-10 w-[333px] h-[398px] md:h-auto md:w-1/3' 
+            className='absolute bottom-1/2 translate-y-2/3 md:translate-y-0 md:bottom-0 right-4 md:right-[10vw] -z-10 lg:z-10 w-[333px] h-[398px] md:w-auto md:h-[88%]' 
             src="/sec_aboutUs.png"
             width={801}
             height={953}
@@ -21,8 +21,8 @@ const page = () => {
           />  
           <div className="custom-shape-3 absolute top-0 left-0 -z-20"></div>
           <div className='min-h-screen h-fit md:w-full justify-between px-4 md:px-[10vw] relative flex flex-col pt-[100px] md:pt-[calc(8.8vh+96px)] max-w-[1920px] mx-auto'>
-            <h1 className='text-mywhite lg:w-1/2 text-[2rem] md:text-5xl lg:text-6xl 2xl:text-8xl md:mb-[120px] font-Montserrat font-bold leading-tight'>Get to Know Carty Moving Company</h1>
-            <div>
+            <h1 className='text-mywhite lg:w-1/2 h1 font-Montserrat font-bold leading-tight'>Get to Know Carty Moving Company</h1>
+            <div className='mb-16'>
               <p className='bg-mywhite md:bg-transparent text-sm md:text-lg xl:text-2xl mt-20 md:mt-0 w-full md:max-w-[40%] mb-11 text-myblack font-Hind font-medium'>We don’t just move boxes; we move lives. Our mission is to provide moving services that cater to your needs, ensuring a smooth transition to your new location. Trust us to handle your move with professionalism.</p>
               <div className='w-[250px]'>
                 <QuoteBtn />

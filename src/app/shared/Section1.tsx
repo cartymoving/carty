@@ -16,10 +16,12 @@ export default async function Section1(){
       />  
       <div className="custom-shape absolute top-0 left-0 -z-20"></div>
       <div className='min-h-screen h-fit md:w-full justify-between px-4 md:px-[10vw] relative flex flex-col pt-[100px] md:pt-[calc(8.8vh+96px)] max-w-[1920px] mx-auto'>
-        <h1 className='text-mywhite h1 w-fit md:mb-[120px] font-Montserrat font-bold leading-tight text-nowrap'>Carty Cares:<br /> Your Premier<br /> Moving Solution</h1>
-        <p className='text-sm md:text-lg xl:text-2xl w-full md:max-w-[40%] mb-11 text-myblack font-Hind font-medium'>We understand that moving is more than just transporting belongings; it’s about starting a new chapter in your life. We’re here to make that transition as smooth as possible, with a commitment to exceptional service and care.</p>
-        <div className='w-[250px]'>
-          <QuoteBtn />
+        <h1 className='text-mywhite h1 w-fit font-Montserrat font-bold leading-tight text-nowrap'>Carty Cares:<br /> Your Premier<br /> Moving Solution</h1>
+        <div className='mb-16'>
+          <p className='text-sm md:text-lg xl:text-2xl w-full md:max-w-[40%] mb-11 text-myblack font-Hind font-medium'>We understand that moving is more than just transporting belongings; it’s about starting a new chapter in your life. We’re here to make that transition as smooth as possible, with a commitment to exceptional service and care.</p>
+          <div className='w-[250px]'>
+            <QuoteBtn />
+          </div>
         </div>
       </div>
     </section>

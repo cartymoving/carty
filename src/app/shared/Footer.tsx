@@ -5,7 +5,7 @@ import Link from 'next/link'
 export default async function Section2(){
   return(
     <div className='w-screen h-[891px] md:h-[460px] relative overflow-hidden'>
-      <div className='h-full w-full translate-y-[86px] footer absolute top-0'>
+      <div className='h-full w-full translate-y-[86px]  5xl:px-[10vw] footer absolute top-0'>
         <div className='mx-4 md:mx-[5vw] lg:mx-[10vw] pt-16 flex max-w-[1920px] pb-12 md:pb-10 border-b-2 5xl:mx-auto justify-center md:items-start md:justify-between flex-col md:flex-row'>
           <div className='flex flex-col gap-6'>
             <Image alt='CartyMoving logo' src="/logo.png" width="153" height="54" className='footerLogo w-[182px] h-[64px] md:mb-0'/>
@@ -49,8 +49,8 @@ export default async function Section2(){
               <div className='flex flex-col gap-2'>
                 <h3 className='text-base md:text-lg font-Montserrat font-bold mb-4'>EXPLORE MORE</h3>
                 <Link className='text-base xl:text-lg' href="/">Home</Link>
-                <Link className='text-base xl:text-lg' href="#">About Us</Link>
-                <Link className='text-base xl:text-lg' href="#">Rates</Link>
+                <Link className='text-base xl:text-lg' href="/aboutUs">About Us</Link>
+                <Link className='text-base xl:text-lg' href="/#sec4">Rates</Link>
                 <Link className='text-base xl:text-lg' href="/contacts">Contact Us</Link>
               </div>
               <div className='flex flex-col gap-2'>

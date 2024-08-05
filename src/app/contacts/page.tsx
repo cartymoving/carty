@@ -17,7 +17,7 @@ const page = () => {
             <div className='max-w-[230px]'>
               <QuoteBtn />
             </div>
-            <div className='flex justify-between md:justify-normal gap-2 md:gap-12 text-mywhite mt-6 md:mt-[5.9vh] pb-12'>
+            <div className='flex justify-between flex-wrap md:justify-normal gap-2 md:gap-12 text-mywhite mt-6 md:mt-[5.9vh] pb-20 md:pb-12'>
               <div className='flex flex-col'>
               <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M32 47.58C36.4183 47.58 40 43.9983 40 39.58C40 35.1617 36.4183 31.58 32 31.58C27.5817 31.58 24 35.1617 24 39.58C24 43.9983 27.5817 47.58 32 47.58Z" fill="#1E5631"/>
@@ -66,7 +66,7 @@ const page = () => {
           </div>
           <div className='w-1/2 h-full hidden lg:flex justify-center items-center'></div>
         </div>
-          <Image src="/sec_contacte.png" alt="worker" width="592" height="923" unoptimized={true} className='absolute h-[30%] sm:h-2/3 lg:h-[75%] 2xl:h-[85%] w-auto -bottom-[200px] skew-y-[14deg] md:skew-y-[3.5deg] left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:right-0 lg:right-[10vw] -z-10'/>
+          <Image src="/sec_contacte.png" alt="worker" width="592" height="923" unoptimized={true} className='absolute h-[36%] sm:h-2/3 lg:h-[75%] 2xl:h-[85%] w-auto -bottom-[200px] skew-y-[14deg] md:skew-y-[3.5deg] left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:right-0 lg:right-[10vw] -z-10'/>
       </div>
     </section>
   )

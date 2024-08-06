@@ -31,9 +31,9 @@ const LargeQuoteBtn:React.FC<params> = ({ color, border, hover }) => {
   return (
     <>
       <div className='w-full h-auto flex justify-center mt-12'>
-        <Link  className={`text-mywhite text-xs md:text-base font-bold font-Montserrat w-full lg:w-fit text-center ${color} rounded-[4px] border-2 ${border} py-[10px] lg:px-[124px] md:hover:bg-white ${hover} transition-all uppercase`} href="#">Get a Quote</Link>
+        <button onClick={toggleOverlay}  className={`text-mywhite text-xs md:text-base font-bold font-Montserrat w-full lg:w-fit text-center ${color} rounded-[4px] border-2 ${border} py-[10px] lg:px-[124px] md:hover:bg-white ${hover} transition-all uppercase`}>Get a Quote</button>
       </div>
-      {/* <Overlay isOpen={isOpen} onClose={toggleOverlay} /> */}
+      <Overlay isOpen={isOpen} onClose={toggleOverlay} />
     </>
   )
 }

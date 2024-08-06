@@ -120,7 +120,7 @@ const NavBar = () => {
           </p>
         </div>
       </div>
-      <div className='bg-mywhite rounded-lg md:px-8 px-4 py-2 md:py-4 relative z-20 flex items-center text-nowrap justify-between w-full h-[42.2px] md:h-[85.44px] xl:h-[90px] 2xl:h-24 nav'>
+      <div className='bg-white rounded-lg md:px-8 px-4 py-2 md:py-4 relative z-20 flex items-center text-nowrap justify-between w-full h-[42.2px] md:h-[85.44px] xl:h-[90px] 2xl:h-24 nav'>
         <div className='lg:hidden block'></div>
         <Link href="/">
           <Image

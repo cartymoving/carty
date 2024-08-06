@@ -122,13 +122,15 @@ const NavBar = () => {
       </div>
       <div className='bg-mywhite rounded-lg md:px-8 px-4 py-2 md:py-4 relative z-20 flex items-center text-nowrap justify-between w-full h-[42.2px] md:h-[85.44px] xl:h-[90px] 2xl:h-24 nav'>
         <div className='lg:hidden block'></div>
-        <Image
-          src="/logo.png"
-          width={182}
-          height={64}
-          alt="logo"
-          className='2xl:w-[182px] 2xl:h-[64px] md:w-[152px] w-[91px]'
-        />
+        <Link href="/">
+          <Image
+            src="/logo.png"
+            width={182}
+            height={64}
+            alt="logo"
+            className='2xl:w-[182px] 2xl:h-[64px] md:w-[152px] w-[91px]'
+          />
+        </Link>
         <div className='gap-6 xl:gap-12 font-medium forHoverParent text-base 2xl:text-xl lg:flex hidden font-Montserrat'>
           <Link href="/" className={`${getLinkClass('/')} forHover`}>Home</Link>
           <Link href="/aboutUs" className={`${getLinkClass('/aboutUs')} forHover`}>About Us</Link>

@@ -2,11 +2,13 @@ import Link from 'next/link'
 import React from 'react'
 import Image from 'next/image'
 import QuoteBtn from '../shared/QuoteBtn'
+import MobileQuoteBtn from '../shared/MobileQuoteBtn'
 
 
 const page = () => {
   return (
     <section className='min-h-screen h-fit w-screen relative -mb-20 md:mb-0'>
+      
       <div className='min-h-screen custom-shape-v2 h-fit md:w-full relative  pt-[100px] md:pt-[calc(8.8vh+96px)]'>
         <div className='skew-y-[14deg] md:skew-y-[3.5deg] pt-[calc(8.8vh+146px)] lg:pt-[calc(8.8vh+96px)] max-w-[1920px] mx-auto px-4 md:px-[10vw]'>
           <div className='w-full lg:w-1/2 h-full'>
@@ -14,8 +16,9 @@ const page = () => {
             <p className='font-Hind font-medium text-mywhite text-base xl:text-lg mt-[4.4vh] mb-[2.2vh]'>
             We value your questions, feedback, and inquiries. Whether you’re planning your next move, need a quote, or just want to learn more about our services, our team is here to assist you every step of the way. Reach out to us using the contact details below.
             </p>
-            <div className='max-w-[230px]'>
-              <QuoteBtn />
+            <div className='w-[154px] md:w-[250px]'>
+                <QuoteBtn />
+                <MobileQuoteBtn />
             </div>
             <div className='flex justify-between flex-wrap md:justify-normal gap-2 md:gap-12 text-mywhite mt-6 md:mt-[5.9vh] pb-20 md:pb-12'>
               <div className='flex flex-col'>
@@ -66,7 +69,8 @@ const page = () => {
           </div>
           <div className='w-1/2 h-full hidden lg:flex justify-center items-center'></div>
         </div>
-          <Image src="/sec_contacte.png" alt="worker" width="592" height="923" unoptimized={true} className='absolute h-[36%] sm:h-2/3 lg:h-[75%] 2xl:h-[85%] w-auto -bottom-[200px] skew-y-[14deg] md:skew-y-[3.5deg] left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:right-0 lg:right-[10vw] -z-10'/>
+        <div className='block md:hidden h-20'></div>
+          <Image src="/sec_contacte.png" alt="worker" width="592" height="923" unoptimized={true} className='absolute h-[36%] sm:h-2/3 lg:h-[75%] 2xl:h-[85%] w-auto -bottom-[160px] skew-y-[14deg] md:skew-y-[3.5deg] left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:right-0 lg:right-[10vw] -z-10'/>
       </div>
     </section>
   )

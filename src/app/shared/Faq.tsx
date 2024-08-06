@@ -32,7 +32,7 @@ const Faq = () => {
   ];
 
   return (
-    <div className='w-full h-[436px] md:h-[473px] flex flex-col gap-2 md:gap-4 pb-[800px] lg:pb-[700px]'>
+    <div className='w-full h-[436px] md:h-[473px] flex flex-col gap-2 md:gap-4 pb-[950px] lg:pb-[700px]'>
       {faqs.map((faq, index) => (
         <div key={index}>
           <button

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ReactDOM from 'react-dom';
 
 interface ActionProps{
   isOpen: boolean;
@@ -36,9 +37,9 @@ const Overlay:React.FC<ActionProps> = ({ isOpen, onClose }) => {
     setCurrentPage(1);
   }
 
-  return (
-    <>
-      {isOpen ? (
+  if (!isOpen) return null;
+
+  return ReactDOM.createPortal(
         <div className='fixed overlay z-[100] flex items-center justify-center -top-8 left-0 w-[100dvw] right-0 h-[calc(100dvh+32px)] bg-[rgba(10, 37, 19, 0.70)]'>
           <div className={`bg-mywhite w-[320px] md:w-[800px] 2xl:h-[629px] rounded-lg py-12 md:py-4 2xl:py-16 md:px-32 justify-between flex flex-col relative overflow-hidden`}>
             <div className='absolute top-4 md:top-6 right-4 md:right-6 cursor-pointer' onClick={goBack}>
@@ -240,10 +241,8 @@ const Overlay:React.FC<ActionProps> = ({ isOpen, onClose }) => {
               </button>
             </div>
           </div> 
-        </div>
-      ) : null}
-    </>
-  );
+        </div> , document.body
+      )
 }
 
 export default Overlay;

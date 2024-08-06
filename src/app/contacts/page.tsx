@@ -8,7 +8,6 @@ import MobileQuoteBtn from '../shared/MobileQuoteBtn'
 const page = () => {
   return (
     <section className='min-h-screen h-fit w-screen relative -mb-20 md:mb-0'>
-      
       <div className='min-h-screen custom-shape-v2 h-fit md:w-full relative  pt-[100px] md:pt-[calc(8.8vh+96px)]'>
         <div className='skew-y-[14deg] md:skew-y-[3.5deg] pt-[calc(8.8vh+146px)] lg:pt-[calc(8.8vh+96px)] max-w-[1920px] mx-auto px-4 md:px-[10vw]'>
           <div className='w-full lg:w-1/2 h-full'>
@@ -70,7 +69,7 @@ const page = () => {
           <div className='w-1/2 h-full hidden lg:flex justify-center items-center'></div>
         </div>
         <div className='block md:hidden h-20'></div>
-          <Image src="/sec_contacte.png" alt="worker" width="592" height="923" unoptimized={true} className='absolute h-[36%] sm:h-2/3 lg:h-[75%] 2xl:h-[85%] w-auto -bottom-[160px] skew-y-[14deg] md:skew-y-[3.5deg] left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:right-0 lg:right-[10vw] -z-10'/>
+          <Image src="/sec_contacte.png" alt="worker" width="592" height="923" unoptimized={true} className='absolute h-[36%] sm:h-2/3 lg:h-[75%] 2xl:h-[81%] w-auto -bottom-[160px] skew-y-[14deg] md:skew-y-[3.5deg] left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:right-0 lg:right-[10vw] -z-10'/>
       </div>
     </section>
   )

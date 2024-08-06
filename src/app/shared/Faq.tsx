@@ -53,9 +53,9 @@ const Faq = () => {
             </span>
           </button>
           <div
-            className={`overflow-hidden transition-all duration-100 ${openIndex === index ? 'max-h-[1000px] md:px-16 py-4' : 'max-h-0'}`}
+            className={`overflow-hidden transition-all duration-100 ${openIndex === index ? 'max-h-[1000px] py-4' : 'max-h-0'}`}
           >
-            <p className='font-Hind font-medium text-sm md:text-lg'>{faq.answer}</p>
+            <p className='font-Hind font-medium md:px-16 text-sm md:text-lg'>{faq.answer}</p>
           </div>
         </div>
       ))}

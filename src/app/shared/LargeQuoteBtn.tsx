@@ -12,21 +12,21 @@ interface params{
 const LargeQuoteBtn:React.FC<params> = ({ color, border, hover }) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  // useEffect(() => {
-  //   const body = document.querySelector("body");
-  //   if (isOpen) {
-  //     body?.classList.add("active");
-  //   } else {
-  //     body?.classList.remove("active");
-  //   }
-  //   return () => {
-  //     body?.classList.remove("active");
-  //   }
-  // }, [isOpen]);
+  useEffect(() => {
+    const body = document.querySelector("body");
+    if (isOpen) {
+      body?.classList.add("active");
+    } else {
+      body?.classList.remove("active");
+    }
+    return () => {
+      body?.classList.remove("active");
+    }
+  }, [isOpen]);
 
-  // const toggleOverlay = () => {
-  //   setIsOpen(!isOpen);
-  // };
+  const toggleOverlay = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
     <>

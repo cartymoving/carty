@@ -178,11 +178,11 @@ const Overlay:React.FC<ActionProps> = ({ isOpen, onClose }) => {
                 <h1 className='font-Montserrat font-bold text-lg md:text-2xl text-center'>Step 3: Moving Details</h1>
                 <p className='font-Hind font-medium md:text-xl text-center md:mt-4 mt-2 mb-[1.5vh] md:mb-[3.6vh] md:mb-18'>Let our team know more details.</p>
                 <div className='grid w-[256px] md:grid-cols-2 translate-x-[136px] md:translate-x-0 md:w-auto grid-rows-3 gap-2 md:gap-4'>
-                  <input type="text" name="Moving Details" placeholder='Moving From *' className='md:text-xl px-6 md:py-3 py-1 container border-[1px] rounded-[4px] border-mygreen'/>
-                  <input type="text" name="Moving Details" placeholder='Moving To *' className='md:text-xl px-6 md:py-3 py-1 container border-[1px] rounded-[4px] border-mygreen'/>
-                  <input type="date" name="Moving Details" className='md:text-xl px-6 md:py-3 py-1 container border-[1px] rounded-[4px] border-mygreen text-gray-400'/>
+                  <input type="number" inputMode="numeric" min="1" max="99999" name="Moving Details" placeholder='Moving From Zip *' className='md:text-xl px-6 md:py-3 py-1 container border-[1px] rounded-[4px] border-mygreen'/>
+                  <input type="number" min="1" max="99999" name="Moving Details" placeholder='Moving To Zip *' className='md:text-xl px-6 md:py-3 py-1 container border-[1px] rounded-[4px] border-mygreen'/>
+                  <input type="date" placeholder="yyyy-mm-dd"  name="Moving Details" className='md:text-xl px-6 md:py-3 py-1 container border-[1px] rounded-[4px] bg-white border-mygreen text-gray-400'/>
                   <input
-                    type="text"
+                    type="text" 
                     placeholder='Email *'
                     name="number of rooms"
                     className='md:text-xl px-6 py-1 container border-[1px] rounded-[4px] border-mygreen'

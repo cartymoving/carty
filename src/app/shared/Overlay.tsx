@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
 import DatePicker from './DatePicker';
 
@@ -8,21 +8,48 @@ interface ActionProps{
 }
 
 const Overlay:React.FC<ActionProps> = ({ isOpen, onClose }) => {
-  const [selectedProperty, setSelectedProperty] = useState('');
-  const [otherText, setOtherText] = useState('');
+  const [Property, setProperty] = useState('');
+  const [Rooms, setRooms] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
 
-  const handleRadioChange = (event: { target: { value: React.SetStateAction<string>; }; }) => {
-    setSelectedProperty(event.target.value);
-    setOtherText('');
+  const handlePropery = (event: { target: { value: string; }; }) => {
+    const { value } = event.target;
+    
+    if (value === 'Private House' || value === 'Office/Commercial' || value === 'Apartment') {
+      (document.querySelector('input[type="text"][name="type of property"]') as HTMLInputElement).value = '';
+    }
+    
+    setProperty(value);
   };
 
-  const handleOtherChange = (event: { target: { value: React.SetStateAction<string>; }; }) => {
-    setSelectedProperty('');
-    setOtherText(event.target.value);
+  const handleRoom = (event: { target: { value: string; }; }) => {
+    const { value } = event.target;
+  
+    if (
+      value === 'Studio' || 
+      value === '1 Bedroom' || 
+      value === '2 Bedroom' || 
+      value === '3 Bedroom' || 
+      value === '4+ Bedroom'
+    ) {
+      (document.querySelector('input[type="text"][name="number of rooms"]') as HTMLInputElement).value = '';
+    }
+  
+    setRooms(value);
   };
+
 
   const IncreasePage = () => {
+    if (Property == ""){
+      alert("You must choose an option");
+      return;
+    }
+
+    if (Rooms == '' && currentPage > 1){
+      alert("You must choose an option");
+      return;
+    }
+
     setCurrentPage(currentPage + 1);
     if(currentPage > 3){
       goBack();
@@ -71,43 +98,39 @@ const Overlay:React.FC<ActionProps> = ({ isOpen, onClose }) => {
                   <h1 className='font-Montserrat font-bold text-lg md:text-2xl text-center'>Step 1: Moving Property</h1>
                   <p className='font-Hind font-medium md:text-xl text-center md:mt-4 mt-2 mb-[2.6vh] md:mb-20'>Select the type of property you are moving.</p>
                   <div className='grid md:grid-cols-2 grid-rows-2 gap-4 w-[256px] md:w-auto md:translate-x-0 translate-x-6'>
-                    <label className={`flex px-6 py-3 items-center container border-[1px] rounded-[4px] border-mygreen cursor-pointer ${selectedProperty === 'Private House' ? 'bg-mygreen text-mywhite' : ''}`}>
+                    <label className={`flex px-6 py-3 items-center container border-[1px] rounded-[4px] border-mygreen cursor-pointer ${Property === 'Private House' ? 'bg-mygreen text-mywhite' : ''}`}>
                       <input 
                         type="radio" 
                         value="Private House"
                         className="hidden" 
                         name="type of property" 
-                        onChange={handleRadioChange} 
-                        checked={selectedProperty === 'Private House'} />
+                        onChange={handlePropery} />
                       <span className="md:text-xl">Private House</span>
                     </label>
-                    <label className={`flex px-6 py-3 items-center container border-[1px] rounded-[4px] border-mygreen cursor-pointer ${selectedProperty === 'Office/Commercial' ? 'bg-mygreen text-mywhite' : ''}`}>
+                    <label className={`flex px-6 py-3 items-center container border-[1px] rounded-[4px] border-mygreen cursor-pointer ${Property === 'Office/Commercial' ? 'bg-mygreen text-mywhite' : ''}`}>
                       <input 
                       type="radio" 
                       value="Office/Commercial" 
                       className="hidden" 
                       name="type of property" 
-                      onChange={handleRadioChange} 
-                      checked={selectedProperty === 'Office/Commercial'} />
+                      onChange={handlePropery} />
                       <span className="md:text-xl">Office/Commercial</span>
                     </label>
-                    <label className={`flex px-6 py-3 items-center container border-[1px] rounded-[4px] border-mygreen cursor-pointer ${selectedProperty === 'Apartment' ? 'bg-mygreen text-mywhite' : ''}`}>
+                    <label className={`flex px-6 py-3 items-center container border-[1px] rounded-[4px] border-mygreen cursor-pointer ${Property === 'Apartment' ? 'bg-mygreen text-mywhite' : ''}`}>
                       <input 
                       type="radio" 
                       value="Apartment" 
                       className="hidden" 
                       name="type of property" 
-                      onChange={handleRadioChange} 
-                      checked={selectedProperty === 'Apartment'} />
+                      onChange={handlePropery} />
                       <span className="md:text-xl">Apartment</span>
                     </label>
                     <input
                       type="text"
                       placeholder='Other'
                       className='md:text-xl px-6 py-3 container border-[1px] rounded-[4px] border-mygreen'
-                      value={otherText}
                       name="type of property"
-                      onChange={handleOtherChange}
+                      onChange={handlePropery}
                     />
                   </div>
                 </div>
@@ -115,54 +138,54 @@ const Overlay:React.FC<ActionProps> = ({ isOpen, onClose }) => {
                 <h1 className='font-Montserrat font-bold text-lg md:text-2xl text-center'>Step 2: Number of Rooms</h1>
                 <p className='font-Hind font-medium md:text-xl text-center md:mt-4 mt-2 mb-[1.6vh] md:mb-18'>How many rooms are being moved?</p>
                 <div className='grid w-[256px] translate-x-[140px] md:translate-x-0 md:w-auto md:grid-cols-2 grid-rows-3 gap-2 md:gap-4'>
-                  <label className={`flex px-6 py-1 md:py-3 items-center container border-[1px] rounded-[4px] border-mygreen cursor-pointer ${selectedProperty === 'Studio' ? 'bg-mygreen text-mywhite' : ''}`}>
+                  <label className={`flex px-6 py-1 md:py-3 items-center container border-[1px] rounded-[4px] border-mygreen cursor-pointer ${Rooms === 'Studio' ? 'bg-mygreen text-mywhite' : ''}`}>
                     <input 
                       type="radio" 
                       value="Studio" 
                       className="hidden" 
                       name="number of rooms" 
-                      onChange={handleRadioChange} 
-                      checked={selectedProperty === 'Studio'} />
+                      onChange={handleRoom} 
+                      />
                     <span className="md:text-xl">Studio</span>
                   </label>
-                  <label className={`flex px-6 py-1 items-center container border-[1px] rounded-[4px] border-mygreen cursor-pointer ${selectedProperty === '1 Bedroom' ? 'bg-mygreen text-mywhite' : ''}`}>
+                  <label className={`flex px-6 py-1 items-center container border-[1px] rounded-[4px] border-mygreen cursor-pointer ${Rooms === '1 Bedroom' ? 'bg-mygreen text-mywhite' : ''}`}>
                     <input 
                     type="radio" 
                     value="1 Bedroom"
                     className="hidden" 
                     name="number of rooms" 
-                    onChange={handleRadioChange} 
-                    checked={selectedProperty === '1 Bedroom'} />
+                    onChange={handleRoom} 
+                     />
                     <span className="md:text-xl">1 Bedroom</span>
                   </label>
-                  <label className={`flex px-6 py-1 md:py-3 items-center container border-[1px] rounded-[4px] border-mygreen cursor-pointer ${selectedProperty === '2 Bedroom' ? 'bg-mygreen text-mywhite' : ''}`}>
+                  <label className={`flex px-6 py-1 md:py-3 items-center container border-[1px] rounded-[4px] border-mygreen cursor-pointer ${Rooms === '2 Bedroom' ? 'bg-mygreen text-mywhite' : ''}`}>
                     <input 
                     type="radio" 
                     value="2 Bedroom" 
                     className="hidden" 
                     name="number of rooms" 
-                    onChange={handleRadioChange} 
-                    checked={selectedProperty === '2 Bedroom'} />
+                    onChange={handleRoom} 
+                    />
                     <span className="md:text-xl">2 Bedroom</span>
                   </label>
-                  <label className={`flex px-6 py-1 md:py-3 items-center container border-[1px] rounded-[4px] border-mygreen cursor-pointer ${selectedProperty === '3 Bedroom' ? 'bg-mygreen text-mywhite' : ''}`}>
+                  <label className={`flex px-6 py-1 md:py-3 items-center container border-[1px] rounded-[4px] border-mygreen cursor-pointer ${Rooms === '3 Bedroom' ? 'bg-mygreen text-mywhite' : ''}`}>
                     <input 
                     type="radio" 
                     value="3 Bedroom" 
                     className="hidden" 
                     name="number of rooms" 
-                    onChange={handleRadioChange} 
-                    checked={selectedProperty === '3 Bedroom'} />
+                    onChange={handleRoom}  
+                    />
                     <span className="md:text-xl">3 Bedroom</span>
                   </label>
-                  <label className={`flex px-6 py-1 items-center container border-[1px] rounded-[4px] border-mygreen cursor-pointer ${selectedProperty === '4+ Bedroom' ? 'bg-mygreen text-mywhite' : ''}`}>
+                  <label className={`flex px-6 py-1 items-center container border-[1px] rounded-[4px] border-mygreen cursor-pointer ${Rooms === '4+ Bedroom' ? 'bg-mygreen text-mywhite' : ''}`}>
                     <input 
                     type="radio" 
                     value="4+ Bedroom" 
                     className="hidden" 
                     name="number of rooms" 
-                    onChange={handleRadioChange} 
-                    checked={selectedProperty === '4+ Bedroom'} />
+                    onChange={handleRoom}
+                    />
                     <span className="md:text-xl">4+ Bedroom</span>
                   </label>
                   <input
@@ -170,8 +193,7 @@ const Overlay:React.FC<ActionProps> = ({ isOpen, onClose }) => {
                     placeholder='Other'
                     name="number of rooms"
                     className='md:text-xl px-6 py-1 container border-[1px] rounded-[4px] border-mygreen'
-                    value={otherText}
-                    onChange={handleOtherChange}
+                    onChange={handleRoom}
                   />
                 </div>
               </div>
@@ -179,10 +201,9 @@ const Overlay:React.FC<ActionProps> = ({ isOpen, onClose }) => {
                 <h1 className='font-Montserrat font-bold text-lg md:text-2xl text-center'>Step 3: Moving Details</h1>
                 <p className='font-Hind font-medium md:text-xl text-center md:mt-4 mt-2 mb-[1.5vh] md:mb-[3.6vh] md:mb-18'>Let our team know more details.</p>
                 <div className='grid w-[256px] md:grid-cols-2 translate-x-[136px] md:translate-x-0 md:w-auto grid-rows-3 gap-2 md:gap-4'>
-                  <input type="number" inputMode="numeric" min="1" max="99999" name="Moving Details" placeholder='Moving From Zip *' className='md:text-xl px-6 md:py-3 py-1 container border-[1px] rounded-[4px] border-mygreen'/>
-                  <input type="number" min="1" max="99999" name="Moving Details" placeholder='Moving To Zip *' className='md:text-xl px-6 md:py-3 py-1 container border-[1px] rounded-[4px] border-mygreen'/>
+                  <input type="number" inputMode="numeric" min={0} max={99999} maxLength={5} name="Moving Details" placeholder='Moving From Zip *' className='md:text-xl px-6 md:py-3 py-1 container border-[1px] rounded-[4px] border-mygreen'/>
+                  <input type="number" min="1" max={99999} maxLength={5} name="Moving Details" placeholder='Moving To Zip *' className='md:text-xl px-6 md:py-3 py-1 container border-[1px] rounded-[4px] border-mygreen'/>
                   <DatePicker />
-                  {/* <input type="date" placeholder="yyyy-mm-dd"  name="Moving Details" className='md:text-xl px-6 md:py-3 py-1 container border-[1px] rounded-[4px] w-full bg-white border-mygreen text-gray-400'/> */}
                   <input
                     type="text" 
                     placeholder='Email *'

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
+import DatePicker from './DatePicker';
 
 interface ActionProps{
   isOpen: boolean;
@@ -180,7 +181,8 @@ const Overlay:React.FC<ActionProps> = ({ isOpen, onClose }) => {
                 <div className='grid w-[256px] md:grid-cols-2 translate-x-[136px] md:translate-x-0 md:w-auto grid-rows-3 gap-2 md:gap-4'>
                   <input type="number" inputMode="numeric" min="1" max="99999" name="Moving Details" placeholder='Moving From Zip *' className='md:text-xl px-6 md:py-3 py-1 container border-[1px] rounded-[4px] border-mygreen'/>
                   <input type="number" min="1" max="99999" name="Moving Details" placeholder='Moving To Zip *' className='md:text-xl px-6 md:py-3 py-1 container border-[1px] rounded-[4px] border-mygreen'/>
-                  <input type="date" placeholder="yyyy-mm-dd"  name="Moving Details" className='md:text-xl px-6 md:py-3 py-1 container border-[1px] rounded-[4px] w-full bg-white border-mygreen text-gray-400'/>
+                  <DatePicker />
+                  {/* <input type="date" placeholder="yyyy-mm-dd"  name="Moving Details" className='md:text-xl px-6 md:py-3 py-1 container border-[1px] rounded-[4px] w-full bg-white border-mygreen text-gray-400'/> */}
                   <input
                     type="text" 
                     placeholder='Email *'

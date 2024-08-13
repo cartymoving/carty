@@ -40,7 +40,7 @@ if (isMobile === null) return;
                 sx: {
                   '& input': {    
                         paddingY: isMobile ? '0.25rem' : '.75rem',
-                        paddingX: isMobile ? '0' : '1.5rem',
+                        paddingX: isMobile ? '1.7rem' : '1.5rem',
                         height: isMobile ? 'auto' : 'auto',
                         width: isMobile ? '100%' : '100%',
                         boxSizing: 'border-box'

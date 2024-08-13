@@ -17,17 +17,6 @@ const Overlay:React.FC<ActionProps> = ({ isOpen, onClose }) => {
   const [phoneNumber, setPhoneNumber] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
 
-  const [formData, setFormData] = useState({
-    notes: '',
-    moveSize: '',
-    originZip: '',
-    destinationZip: '',
-    email: '',
-    fullname: '',
-    moveDate: '',
-    phoneNumber: '',
-  });
-
   const submitForm = async (formDate: string) => {
     const FormData = {
       notes: Property,
@@ -113,6 +102,16 @@ const Overlay:React.FC<ActionProps> = ({ isOpen, onClose }) => {
     setPhoneNumber(value);
   };
 
+  function validateEmail(email: string): boolean {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  }
+
+  function validatePhoneNumber(phone: string): boolean {
+    const phoneRegex = /^(?:\+1\s?)?(\d{3}|\(\d{3}\))[-.\s]?\d{3}[-.\s]?\d{4}$/;
+    return phoneRegex.test(phone);
+  }
+
   const IncreasePage = (e: { preventDefault: () => void; }) => {
     if (Property == ""){
       alert("You must choose an option");
@@ -132,6 +131,15 @@ const Overlay:React.FC<ActionProps> = ({ isOpen, onClose }) => {
       submitForm(formDate.toString());
       if (MovingFrom == '' || MovingTo == '' || email == '' || name == '' || formDate == '' || phoneNumber == ''){
         alert("You must fill all fields");
+        return;
+      }
+      if(!validateEmail(email)){
+        alert("You should use valid mail");
+        return;
+      }
+
+      if(!validatePhoneNumber(phoneNumber)){
+        alert("You should use valid phone number");
         return;
       }
     }
@@ -287,8 +295,8 @@ const Overlay:React.FC<ActionProps> = ({ isOpen, onClose }) => {
                 <h1 className='font-Montserrat font-bold text-lg md:text-2xl text-center'>Step 3: Moving Details</h1>
                 <p className='font-Hind font-medium md:text-xl text-center md:mt-4 mt-2 mb-[1.5vh] md:mb-[3.6vh] md:mb-18'>Let our team know more details.</p>
                 <div className='grid w-[256px] md:grid-cols-2 translate-x-[136px] md:translate-x-0 md:w-auto grid-rows-3 gap-2 md:gap-4'>
-                  <input type="number" onChange={handleMovingFrom} required inputMode="numeric" min={0} max={99999} maxLength={5} name="Moving Details" placeholder='Moving From Zip *' className='md:text-xl px-6 md:py-3 py-1 container border-[1px] rounded-[4px] border-mygreen'/>
-                  <input type="number" onChange={handleMovingTo} required min="1" max={99999} maxLength={5} name="Moving Details" placeholder='Moving To Zip *' className='md:text-xl px-6 md:py-3 py-1 container border-[1px] rounded-[4px] border-mygreen'/>
+                  <input type="number"  onInput={(e) => {const input = e.target as HTMLInputElement; input.value = input.value.slice(0, 5);}} onChange={handleMovingFrom} required inputMode="numeric" min={0} max={99999} maxLength={5} name="Moving Details" placeholder='Moving From Zip *' className='md:text-xl px-6 md:py-3 py-1 container border-[1px] rounded-[4px] border-mygreen'/>
+                  <input type="number" onInput={(e) => {const input = e.target as HTMLInputElement; input.value = input.value.slice(0, 5);}} onChange={handleMovingTo} required min="1" max={99999} maxLength={5} name="Moving Details" placeholder='Moving To Zip *' className='md:text-xl px-6 md:py-3 py-1 container border-[1px] rounded-[4px] border-mygreen'/>
                   <DatePicker />
                   <input
                     type="text" 

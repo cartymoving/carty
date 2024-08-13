@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import ReactDOM from 'react-dom';
 import DatePicker from './DatePicker';
 
@@ -10,7 +10,57 @@ interface ActionProps{
 const Overlay:React.FC<ActionProps> = ({ isOpen, onClose }) => {
   const [Property, setProperty] = useState('');
   const [Rooms, setRooms] = useState('');
+  const [MovingFrom, setMovingFrom] = useState('');
+  const [MovingTo, setMovingTo] = useState('');
+  const [email, setEmail] = useState('');
+  const [name, setName] = useState('');
+  const [phoneNumber, setPhoneNumber] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
+
+  const [formData, setFormData] = useState({
+    notes: '',
+    moveSize: '',
+    originZip: '',
+    destinationZip: '',
+    email: '',
+    fullname: '',
+    moveDate: '',
+    phoneNumber: '',
+  });
+
+  const submitForm = async (formDate: string) => {
+    const FormData = {
+      notes: Property,
+      moveSize: Rooms,
+      originZip: MovingFrom,
+      destinationZip: MovingTo,
+      email,
+      fullname: name,
+      moveDate: formDate,
+      phoneNumber,
+    };
+    try {
+      const response = await fetch('https://api.smartmoving.com/api/leads/from-provider/v2?providerKey=a3bfdc1e-e3e6-4bb1-bcd3-b04c0129b142', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(FormData),
+      });
+  
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+  
+      const data = await response.json();
+      console.log('Success:', data);
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  };
+
+
+  const formRef = useRef(null);
 
   const handlePropery = (event: { target: { value: string; }; }) => {
     const { value } = event.target;
@@ -38,8 +88,32 @@ const Overlay:React.FC<ActionProps> = ({ isOpen, onClose }) => {
     setRooms(value);
   };
 
+  const handleMovingTo = (event: { target: { value: string; }; }) => {
+    const { value } = event.target;
+    setMovingTo(value);
+  };
 
-  const IncreasePage = () => {
+  const handleMovingFrom = (event: { target: { value: string; }; }) => {
+    const { value } = event.target;
+    setMovingFrom(value);
+  };
+
+  const handleEmail = (event: { target: { value: string; }; }) => {
+    const { value } = event.target;
+    setEmail(value);
+  };
+
+  const handleName = (event: { target: { value: string; }; }) => {
+    const { value } = event.target;
+    setName(value);
+  };
+
+  const handlePhoneNumber = (event: { target: { value: string; }; }) => {
+    const { value } = event.target;
+    setPhoneNumber(value);
+  };
+
+  const IncreasePage = (e: { preventDefault: () => void; }) => {
     if (Property == ""){
       alert("You must choose an option");
       return;
@@ -48,6 +122,18 @@ const Overlay:React.FC<ActionProps> = ({ isOpen, onClose }) => {
     if (Rooms == '' && currentPage > 1){
       alert("You must choose an option");
       return;
+    }
+    
+    if (currentPage > 2 && currentPage < 4) {
+      e.preventDefault();
+      const formData = new FormData(formRef.current!);
+      const formObject = Object.fromEntries(formData.entries());
+      const formDate = formObject.date;
+      submitForm(formDate.toString());
+      if (MovingFrom == '' || MovingTo == '' || email == '' || name == '' || formDate == '' || phoneNumber == ''){
+        alert("You must fill all fields");
+        return;
+      }
     }
 
     setCurrentPage(currentPage + 1);
@@ -93,7 +179,7 @@ const Overlay:React.FC<ActionProps> = ({ isOpen, onClose }) => {
               </svg>) : <p>3</p>}
               </div>
             </div>
-            <form className='flex parent absolute h-fit mt-[50px] md:mt-[72px]'>
+            <form ref={formRef} className='flex parent absolute h-fit mt-[50px] md:mt-[72px]'>
                 <div className={`first inline-block relative w-[304px] md:w-[528px] transition-all mr-[500px] ${currentPage == 1 ? "translate-x-2 md:translate-x-2" : "-translate-x-[1000px]"}`}>
                   <h1 className='font-Montserrat font-bold text-lg md:text-2xl text-center'>Step 1: Moving Property</h1>
                   <p className='font-Hind font-medium md:text-xl text-center md:mt-4 mt-2 mb-[2.6vh] md:mb-20'>Select the type of property you are moving.</p>
@@ -103,7 +189,7 @@ const Overlay:React.FC<ActionProps> = ({ isOpen, onClose }) => {
                         type="radio" 
                         value="Private House"
                         className="hidden" 
-                        name="type of property" 
+                        name="type of property"
                         onChange={handlePropery} />
                       <span className="md:text-xl">Private House</span>
                     </label>
@@ -201,28 +287,34 @@ const Overlay:React.FC<ActionProps> = ({ isOpen, onClose }) => {
                 <h1 className='font-Montserrat font-bold text-lg md:text-2xl text-center'>Step 3: Moving Details</h1>
                 <p className='font-Hind font-medium md:text-xl text-center md:mt-4 mt-2 mb-[1.5vh] md:mb-[3.6vh] md:mb-18'>Let our team know more details.</p>
                 <div className='grid w-[256px] md:grid-cols-2 translate-x-[136px] md:translate-x-0 md:w-auto grid-rows-3 gap-2 md:gap-4'>
-                  <input type="number" inputMode="numeric" min={0} max={99999} maxLength={5} name="Moving Details" placeholder='Moving From Zip *' className='md:text-xl px-6 md:py-3 py-1 container border-[1px] rounded-[4px] border-mygreen'/>
-                  <input type="number" min="1" max={99999} maxLength={5} name="Moving Details" placeholder='Moving To Zip *' className='md:text-xl px-6 md:py-3 py-1 container border-[1px] rounded-[4px] border-mygreen'/>
+                  <input type="number" onChange={handleMovingFrom} required inputMode="numeric" min={0} max={99999} maxLength={5} name="Moving Details" placeholder='Moving From Zip *' className='md:text-xl px-6 md:py-3 py-1 container border-[1px] rounded-[4px] border-mygreen'/>
+                  <input type="number" onChange={handleMovingTo} required min="1" max={99999} maxLength={5} name="Moving Details" placeholder='Moving To Zip *' className='md:text-xl px-6 md:py-3 py-1 container border-[1px] rounded-[4px] border-mygreen'/>
                   <DatePicker />
                   <input
                     type="text" 
                     placeholder='Email *'
-                    name="number of rooms"
+                    name="email"
                     className='md:text-xl px-6 py-1 container border-[1px] rounded-[4px] border-mygreen'
+                    required
+                    onChange={handleEmail}
                   />
                   
                   <input
                     type="text"
                     placeholder='Name *'
-                    name="number of rooms"
+                    name="name"
                     className='md:text-xl px-6 py-1 container border-[1px] rounded-[4px] border-mygreen'
+                    required
+                    onChange={handleName}
                   />
 
                   <input
                     type="text"
-                    placeholder='Other Information'
-                    name="number of rooms"
+                    placeholder='Phone Number'
+                    name="phone"
                     className='md:text-xl px-6 py-1 container border-[1px] rounded-[4px] border-mygreen'
+                    required
+                    onChange={handlePhoneNumber}
                   />
                 </div>
               </div>

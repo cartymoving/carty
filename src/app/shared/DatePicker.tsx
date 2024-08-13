@@ -3,6 +3,7 @@
 import { DatePicker, LocalizationProvider } from '@mui/x-date-pickers';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { useEffect, useState } from 'react';
+import 'dayjs/locale/en';
 
 export default function DatePickerElement () {
   const [isMobile, setIsMobile] = useState<boolean | null>(null);
@@ -27,6 +28,7 @@ if (isMobile === null) return;
         <LocalizationProvider dateAdapter={AdapterDayjs}>
             <DatePicker disablePast 
             name="date"
+            format='MM/DD/YYYY'
             className='container rounded-[4px] flex items-center'
             slotProps={{ 
               textField: {

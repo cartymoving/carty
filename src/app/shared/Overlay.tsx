@@ -138,6 +138,11 @@ const Overlay:React.FC<ActionProps> = ({ isOpen, onClose }) => {
         return;
       }
 
+      if (MovingFrom.length != 5 || MovingTo.length != 5){
+        alert("Zip code must contain 5 numbers");
+        return;
+      }
+
       if(!validatePhoneNumber(phoneNumber)){
         alert("You should use valid phone number");
         return;

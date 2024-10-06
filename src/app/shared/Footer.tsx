@@ -44,6 +44,7 @@ export default async function Section2(){
               <Link href="tel:8188351880" className='text-[1.25rem] md:text-base xl:text-lg'>Phone: (818) 835 - 1880</Link>
               <Link href="mailto: contact@cartymoving.com" className='text-[1.1rem] md:text-base xl:text-lg'>Email: contact@cartymoving.com</Link>
               <p className='text-[1.1rem] md:text-base xl:text-lg'>Office Hours: 8 am - 7 pm</p>
+              <p className='text-[1.1rem] md:text-base xl:text-lg'>Address: 1185 Campbell Ave Unit H9,<br/> San Jose, CA 95126 </p>
             </div>
             <div className='flex justify-between md:gap-8 lg:gap-16 xl:gap-20 2xl:gap-24 md:mt-0 mt-12'>
               <div className='flex flex-col gap-2'>

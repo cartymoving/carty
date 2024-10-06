@@ -65,7 +65,7 @@ const page = () => {
               </svg>
                 <h3 className='font-Montserrat font-bold md:text-2xl mt-1 md:mt-[2.2vh] mb-1 md:mb-[1.4vh] text-nowrap'>Address</h3>
                 
-                <Link href="https://www.google.com/maps/place/1185+Campbell+Ave+j1,+San+Jose,+CA+95126,+USA/@37.3472832,-121.9281981,17.25z/data=!4m5!3m4!1s0x808fcba0aeedf6eb:0xbf148ffaa85d13a0!8m2!3d37.3469348!4d-121.9298072?entry=ttu" target='_blank' className='font-Hind font-medium text-sm md:text-xl'>1185 Campbell Ave Unit J1,<br/> San Jose, CA 95126</Link>
+                <Link href="https://www.google.com/maps/place/1185+Campbell+Ave+j1,+San+Jose,+CA+95126,+USA/@37.3472832,-121.9281981,17.25z/data=!4m5!3m4!1s0x808fcba0aeedf6eb:0xbf148ffaa85d13a0!8m2!3d37.3469348!4d-121.9298072?entry=ttu" target='_blank' className='font-Hind font-medium text-sm md:text-xl'>1185 Campbell Ave Unit H9,<br/> San Jose, CA 95126</Link>
               </div>
             </div>
           </div>

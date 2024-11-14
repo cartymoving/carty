@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import NavBar from "./shared/NavBar";
 import Footer from "./shared/Footer";
+import NavBar from "./shared/NavBar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -31,6 +31,25 @@ export default function RootLayout({
         <footer>
           <Footer />
         </footer>
+        <script
+        id="mb-js-params"
+        dangerouslySetInnerHTML={{
+          __html: `
+            const tenantId = 158;
+            try {
+              localStorage.setItem('TENANT_ID', tenantId);
+            } catch (error) {
+              console.error("Failed to set TENANT_ID in localStorage", error);
+            }
+            window.mbCommonProps = {
+              TENANT_ID: tenantId,
+              COMPANY_MOVE_TYPES: ["RESIDENTIAL","COMMERCIAL","MILITARY"],
+              COMPANY_PHONE: "8188351880",
+              COMPANY_THANKYOUPAGE_URL: ""
+            };
+          `,
+        }}
+      />
       </body>  
     </html>
   );

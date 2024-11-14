@@ -1,4 +1,3 @@
-import React from 'react'
 import Section1 from './shared/Section1'
 import Section2 from './shared/Section2'
 import Section3 from './shared/Section3'

@@ -1,14 +1,32 @@
-import Link from 'next/link'
-import React from 'react'
-import Image from 'next/image'
-import QuoteBtn from '../shared/QuoteBtn'
-import MobileQuoteBtn from '../shared/MobileQuoteBtn'
+'use client'
 
+import Link from 'next/link'
+import React, { useEffect } from 'react'
+import Image from 'next/image'
+import MobileQuoteBtn from '../shared/MobileQuoteBtn'
+import QuoteForm from '../shared/QuoteForm'
+import QuoteBtn from '../shared/QuoteBtn'
 
 const page = () => {
+
+  useEffect(() => {
+    console.log('mounting');
+    const script = document.createElement('script');
+    script.setAttribute('data-moveboard-company-id', '158');
+    script.src = 'https://embed.elromco.com/integration.js';
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      console.log('unmounting');
+      document.body.removeChild(script);
+    };
+  }, []);
+
   return (
+    <>
     <section className='min-h-screen h-fit w-screen relative -mb-20 md:mb-0'>
-      <div className='min-h-screen custom-shape-v2 h-fit md:w-full relative  pt-[100px] md:pt-[calc(8.8vh+96px)]'>
+      <div className='min-h-screen custom-shape-v2 h-fit md:w-full relative pt-[100px] md:pt-[calc(8.8vh+96px)]'>
         <div className='skew-y-[14deg] md:skew-y-[3.5deg] pt-[calc(8.8vh+146px)] lg:pt-[calc(8.8vh+96px)] max-w-[1920px] mx-auto px-4 md:px-[10vw]'>
           <div className='w-full lg:w-1/2 h-full'>
             <h1 className='text-mywhite text-[2rem] md:text-4xl xl:text-5xl 4xl:text-6xl w-fit font-Montserrat font-bold leading-tight'>Get in Touch with <br /> Carty Moving Company</h1>
@@ -72,9 +90,11 @@ const page = () => {
           <div className='w-1/2 h-full hidden lg:flex justify-center items-center'></div>
         </div>
         <div className='block md:hidden h-20'></div>
-          <Image src="/sec_contacte.png" alt="worker" width="592" height="923" unoptimized={true} className='absolute h-[32%] sm:h-2/3 lg:h-[75%] 2xl:h-[81%] w-auto -bottom-[160px] skew-y-[14deg] md:skew-y-[3.5deg] left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:right-0 lg:right-[10vw] -z-10'/>
+          <Image src="/sec_contacte.png" alt="worker" width="635" height="788" unoptimized={true} className='absolute h-[26%] sm:h-[60%] lg:h-[70%] 2xl:h-[76%] w-auto -bottom-[130px] skew-y-[14deg] md:skew-y-[3.5deg] left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:right-0 lg:right-[10vw] -z-10'/>
       </div>
+    <QuoteForm /> 
     </section>
+    </>
   )
 }
 

@@ -5,6 +5,7 @@ import Section5 from '../shared/Section5'
 import QuoteBtn from '../shared/QuoteBtn'
 import Faq from '../shared/Faq'
 import MobileQuoteBtn from '../shared/MobileQuoteBtn'
+import NavBar from '../shared/NavBar'
 
 
 const page = () => {

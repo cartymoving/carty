@@ -1,7 +1,4 @@
-'use client'
-import Link from 'next/link'
-import React, { useEffect, useState } from 'react'
-import Overlay from './Overlay';
+import Link from "next/link";
 
 interface params{
   color: string;
@@ -10,31 +7,11 @@ interface params{
 }
 
 const LargeQuoteBtn:React.FC<params> = ({ color, border, hover }) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  useEffect(() => {
-    const body = document.querySelector("body");
-    if (isOpen) {
-      body?.classList.add("active");
-    } else {
-      body?.classList.remove("active");
-    }
-    return () => {
-      body?.classList.remove("active");
-    }
-  }, [isOpen]);
-
-  const toggleOverlay = () => {
-    setIsOpen(!isOpen);
-  };
 
   return (
-    <>
-      <div className='w-full h-auto flex justify-center mt-12'>
-        <button onClick={toggleOverlay}  className={`text-mywhite text-xs md:text-base font-bold font-Montserrat w-full lg:w-fit text-center ${color} rounded-[4px] border-2 ${border} py-[10px] lg:px-[124px] md:hover:bg-white ${hover} transition-all uppercase`}>Get a Quote</button>
-      </div>
-      <Overlay isOpen={isOpen} onClose={toggleOverlay} />
-    </>
+    <div className='w-full h-auto flex justify-center mt-12'>
+      <Link href="/contacts#quote"><button className={`text-mywhite text-xs md:text-base font-bold font-Montserrat w-full lg:w-fit text-center ${color} rounded-[4px] border-2 ${border} py-[10px] lg:px-[124px] md:hover:bg-white ${hover} transition-all uppercase`}>Get a Quote</button></Link>
+    </div>
   )
 }
 

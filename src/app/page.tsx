@@ -1,3 +1,4 @@
+import Script from 'next/script'
 import Section1 from './shared/Section1'
 import Section2 from './shared/Section2'
 import Section3 from './shared/Section3'
@@ -7,6 +8,11 @@ import Section5 from './shared/Section5'
 const page = () => {
   return (
     <>
+      <Script 
+        src="https://embed.elromco.com/integration.js" 
+        strategy="afterInteractive" 
+        data-moveboard-company-id="158"
+      />
       <Section1 />
       <Section2 />
       <Section3 />

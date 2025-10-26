@@ -56,7 +56,8 @@ const page = () => {
                 <path d="M48 53.579C47.7348 53.579 47.4804 53.4736 47.2929 53.2861C47.1054 53.0986 47 52.8442 47 52.579C47 52.3138 47.1054 52.0594 47.2929 51.8719C47.4804 51.6843 47.7348 51.579 48 51.579C49.654 51.579 51 50.233 51 48.579C51 48.3138 51.1054 48.0594 51.2929 47.8719C51.4804 47.6843 51.7348 47.579 52 47.579C52.2652 47.579 52.5196 47.6843 52.7071 47.8719C52.8946 48.0594 53 48.3138 53 48.579C53 51.336 50.757 53.579 48 53.579Z" fill="#F6F9FC"/>
               </svg>
               <h3 className='font-Montserrat font-bold md:text-2xl mt-1 md:mt-[2.2vh] mb-1 md:mb-[1.4vh]'>Phone</h3>
-              <Link href="tel: 8188351880" className='font-Hind font-medium text-sm md:text-xl text-nowrap'>(818) 835 - 1880</Link>
+              <Link href="tel:8188351880" className='font-Hind font-medium text-sm md:text-xl text-nowrap'>(818) 835 - 1880</Link>
+              <Link href="tel:3109881805" className='font-Hind font-medium text-sm md:text-xl text-nowrap'>(310) 988 - 1805</Link>
               </div>
               <div className='flex flex-col'>
                 <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -82,8 +83,8 @@ const page = () => {
                 <path d="M32 52.498C31.8058 52.498 31.6157 52.4415 31.453 52.3353C31.2903 52.2291 31.1621 52.0778 31.084 51.9C29.265 47.764 26.321 44.495 23.204 41.033C20.563 38.1 17.832 35.067 15.882 31.479C14.421 28.791 13.675 26.05 13.666 23.333C13.6656 23.2016 13.6911 23.0715 13.741 22.95C13.7909 22.8286 13.8642 22.7181 13.9568 22.625C14.0494 22.5318 14.1594 22.4578 14.2806 22.4072C14.4017 22.3566 14.5317 22.3303 14.663 22.33H14.666C14.9307 22.33 15.1846 22.4349 15.3721 22.6218C15.5595 22.8087 15.6652 23.0623 15.666 23.327C15.674 25.708 16.337 28.129 17.639 30.523C19.476 33.903 22.127 36.847 24.69 39.694C27.775 43.121 30.966 46.665 32.915 51.094C32.9679 51.2141 32.9965 51.3435 32.9993 51.4747C33.0022 51.606 32.9791 51.7365 32.9314 51.8588C32.8838 51.9811 32.8125 52.0928 32.7217 52.1875C32.6308 52.2823 32.5222 52.3582 32.402 52.411C32.2759 52.4687 32.1387 52.4984 32 52.498Z" fill="#F6F9FC"/>
               </svg>
                 <h3 className='font-Montserrat font-bold md:text-2xl mt-1 md:mt-[2.2vh] mb-1 md:mb-[1.4vh] text-nowrap'>Address</h3>
-                
                 <Link href="https://www.google.com/maps/place/1185+Campbell+Ave+j1,+San+Jose,+CA+95126,+USA/@37.3472832,-121.9281981,17.25z/data=!4m5!3m4!1s0x808fcba0aeedf6eb:0xbf148ffaa85d13a0!8m2!3d37.3469348!4d-121.9298072?entry=ttu" target='_blank' className='font-Hind font-medium text-sm md:text-xl'>1185 Campbell Ave Unit H9,<br/> San Jose, CA 95126</Link>
+                <p className='font-Hind font-medium text-sm md:text-xl mt-4'>1441 Wright St, Unit B,<br/> Los Angeles, CA, 90015</p>
               </div>
             </div>
           </div>

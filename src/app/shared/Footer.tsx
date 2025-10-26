@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export default async function Section2(){
   return(
-    <div className='w-screen h-[891px] md:h-[460px] relative overflow-hidden'>
+    <div className='w-screen h-[1025px] md:h-[555px] relative overflow-hidden'>
       <div className='h-full w-full translate-y-[86px]  5xl:px-[10vw] footer absolute top-0'>
         <div className='mx-4 md:mx-[5vw] lg:mx-[10vw] pt-16 flex max-w-[1920px] pb-12 md:pb-10 border-b-2 5xl:mx-auto justify-center md:items-start md:justify-between flex-col md:flex-row'>
           <div className='flex flex-col gap-6'>
@@ -41,10 +41,22 @@ export default async function Section2(){
           <div className='text-[#f1f1f1] text-nowrap flex flex-col md:flex-row md:gap-8 lg:gap-16 xl:gap-20 2xl:gap-24'>
             <div className='flex flex-col gap-2 md:ml-4 md:mt-0 mt-12'>
               <h3 className='text-base md:text-lg font-Montserrat font-bold mb-4'>OUR CONTACTS</h3>
-              <Link href="tel:8188351880" className='text-[1.25rem] md:text-base xl:text-lg'>Phone: (818) 835 - 1880</Link>
+              <div className="flex gap-2">
+                <p className='text-[1.25rem] md:text-base xl:text-lg'>Phone:</p>
+                <div>
+                  <Link href="tel:8188351880" className='text-[1.25rem] md:text-base xl:text-lg block'>(818) 835 - 1880</Link>
+                  <Link href="tel:3109881805" className='text-[1.25rem] md:text-base xl:text-lg'>(310) 988 - 1805</Link>
+                </div>
+              </div>
               <Link href="mailto: contact@cartymoving.com" className='text-[1.1rem] md:text-base xl:text-lg'>Email: contact@cartymoving.com</Link>
               <p className='text-[1.1rem] md:text-base xl:text-lg'>Office Hours: 8 am - 7 pm</p>
-              <p className='text-[1.1rem] md:text-base xl:text-lg'>Address: 1185 Campbell Ave Unit H9,<br/> San Jose, CA 95126 </p>
+              <div className="flex gap-2">
+                <p className='text-[1.1rem] md:text-base xl:text-lg'>Address:</p>
+                <div>
+                  <p className='text-[1.1rem] md:text-base xl:text-lg mb-2'>1185 Campbell Ave Unit H9,<br/> San Jose, CA 95126 </p>
+                  <p className='text-[1.1rem] md:text-base xl:text-lg'>Address: 441 Wright St, Unit B, <br/> Los Angeles, CA, 90015 </p>
+                </div>
+              </div>
             </div>
             <div className='flex justify-between md:gap-8 lg:gap-16 xl:gap-20 2xl:gap-24 md:mt-0 mt-12'>
               <div className='flex flex-col gap-2'>

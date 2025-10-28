@@ -1,7 +1,6 @@
 'use client'
 
 import Link from 'next/link'
-import React, { useEffect } from 'react'
 import Image from 'next/image'
 import MobileQuoteBtn from '../shared/MobileQuoteBtn'
 import QuoteForm from '../shared/QuoteForm'
@@ -9,22 +8,9 @@ import QuoteBtn from '../shared/QuoteBtn'
 
 const page = () => {
 
-  useEffect(() => {
-    console.log('mounting');
-    const script = document.createElement('script');
-    script.setAttribute('data-moveboard-company-id', '158');
-    script.src = 'https://embed.elromco.com/integration.js';
-    script.async = true;
-    document.body.appendChild(script);
-
-    return () => {
-      console.log('unmounting');
-      document.body.removeChild(script);
-    };
-  }, []);
-
   return (
     <>
+    <script src="https://embed.elromco.com/integration.js" data-moveboard-company-id="158"></script>
     <section className='min-h-screen h-fit w-screen relative -mb-20 md:mb-0'>
       <div className='min-h-screen custom-shape-v2 h-fit md:w-full relative pt-[100px] md:pt-[calc(8.8vh+96px)]'>
         <div className='skew-y-[14deg] md:skew-y-[3.5deg] pt-[calc(8.8vh+146px)] lg:pt-[calc(8.8vh+96px)] max-w-[1920px] mx-auto px-4 md:px-[10vw]'>

@@ -8,11 +8,6 @@ import Section5 from './shared/Section5'
 const page = () => {
   return (
     <>
-      <Script 
-        src="https://embed.elromco.com/integration.js" 
-        strategy="afterInteractive" 
-        data-moveboard-company-id="158"
-      />
       <Section1 />
       <Section2 />
       <Section3 />

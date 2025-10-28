@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import HardReloadLink from './HardReloadLink'
 
 export default async function Section2(){
   return(
@@ -56,7 +57,10 @@ export default async function Section2(){
                 <Link className='text-base xl:text-lg' href="/">Home</Link>
                 <Link className='text-base xl:text-lg' href="/aboutUs">About Us</Link>
                 <Link className='text-base xl:text-lg' href="/#sec4">Rates</Link>
-                <Link className='text-base xl:text-lg' href="/contacts">Contact Us</Link>
+                <HardReloadLink 
+                  className='text-base xl:text-lg' 
+                  href="/contacts" 
+                >Contact Us</HardReloadLink>
               </div>
               <div className='flex flex-col gap-2'>
                 <h3 className='text-base md:text-lg font-Montserrat font-bold mb-4'>LOCATIONS</h3>

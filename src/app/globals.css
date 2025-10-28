@@ -314,3 +314,11 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
+
+.elromco_powered_by-logo {
+  display: none !important;
+}
+
+.el-typography_h4 a{
+  text-decoration: underline;
+}

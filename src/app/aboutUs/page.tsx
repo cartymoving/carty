@@ -12,11 +12,6 @@ import Script from 'next/script'
 const page = () => {
   return (
     <>
-      <Script 
-          src="https://embed.elromco.com/integration.js" 
-          strategy="afterInteractive" 
-          data-moveboard-company-id="158"
-        />
         <section className="h-fit w-screen relative">
           <Image
             className='absolute bottom-[60%] translate-y-2/3 md:translate-y-0 md:bottom-0 right-4 md:right-[10vw] -z-10 lg:z-10 w-[333px] h-[398px] md:w-auto md:h-[88%]' 

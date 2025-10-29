@@ -10,7 +10,6 @@ const page = () => {
 
   return (
     <>
-    <script src="https://embed.elromco.com/integration.js" data-moveboard-company-id="158"></script>
     <section className='min-h-screen h-fit w-screen relative -mb-20 md:mb-0'>
       <div className='min-h-screen custom-shape-v2 h-fit md:w-full relative pt-[100px] md:pt-[calc(8.8vh+96px)]'>
         <div className='skew-y-[14deg] md:skew-y-[3.5deg] pt-[calc(8.8vh+146px)] lg:pt-[calc(8.8vh+96px)] max-w-[1920px] mx-auto px-4 md:px-[10vw]'>

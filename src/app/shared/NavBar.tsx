@@ -86,9 +86,9 @@ const NavBar = () => {
     <nav className='top-8 fixed left-1/2 -translate-x-1/2 w-full h-fit px-[16px] md:px-[6vw] xl:px-[10vw] z-[60]'>
       <div className='lg:hidden absolute left-1/2 top-2 -translate-x-1/2 bg-white rounded-full w-2 h-2 close hiddenMenu'>
         <div className={`gap-4 text-[2rem] -mt-40 font-medium xL:hidden absolute left-1/2 w-screen h-[100dvh] px-4 -translate-x-1/2 top-[292px] flex-col lg:hidden text-nowrap font-Montserrat flex items-start justify-end menuel ${!isMenuVisible ? 'pointer-events-none' : 'pointer-events-auto'}`}>
-          <Link href="/" className={getLinkClass('/')}>Home</Link>
-          <Link href="/aboutUs" className={getLinkClass('/aboutUs')}>About Us</Link>
-          <Link href="/#sec4" className={getLinkClass('/rates')}>Rates</Link>
+          <HardReloadLink href="/" className={getLinkClass('/')}>Home</HardReloadLink>
+          <HardReloadLink href="/aboutUs" className={getLinkClass('/aboutUs')}>About Us</HardReloadLink>
+          <HardReloadLink href="/#sec4" className={getLinkClass('/rates')}>Rates</HardReloadLink>
           <HardReloadLink 
             href="/contacts" 
             className={getLinkClass('/contacts')}
@@ -111,7 +111,7 @@ const NavBar = () => {
       </div>
       <div className='bg-white rounded-lg md:px-8 px-4 py-2 md:py-4 relative z-20 flex items-center text-nowrap justify-between w-full h-[42.2px] md:h-[85.44px] xl:h-[90px] 2xl:h-24 nav'>
         <div className='lg:hidden block'></div>
-        <Link href="/" className="mx-auto lg:mx-0">
+        <HardReloadLink href="/" className="mx-auto lg:mx-0">
           <Image
             src="/logo.png"
             width={182}
@@ -119,11 +119,11 @@ const NavBar = () => {
             alt="logo"
             className='2xl:w-[182px] 2xl:h-[64px] md:w-[152px] w-[91px]'
           />
-        </Link>
+        </HardReloadLink>
         <div className='gap-6 xl:gap-12 font-medium forHoverParent text-base 2xl:text-xl lg:flex hidden font-Montserrat'>
-          <Link href="/" className={`${getLinkClass('/')} forHover`}>Home</Link>
-          <Link href="/aboutUs" className={`${getLinkClass('/aboutUs')} forHover`}>About Us</Link>
-          <Link href="/#sec4" className={`${getLinkClass('/rates')} forHover`}>Rates</Link>
+          <HardReloadLink href="/" className={`${getLinkClass('/')} forHover`}>Home</HardReloadLink>
+          <HardReloadLink href="/aboutUs" className={`${getLinkClass('/aboutUs')} forHover`}>About Us</HardReloadLink>
+          <HardReloadLink href="/#sec4" className={`${getLinkClass('/rates')} forHover`}>Rates</HardReloadLink>
           <HardReloadLink 
             href="/contacts" 
             className={`${getLinkClass('/contacts')} forHover`}

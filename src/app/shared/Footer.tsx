@@ -54,9 +54,9 @@ export default async function Section2(){
             <div className='flex justify-between md:gap-8 lg:gap-16 xl:gap-20 2xl:gap-24 md:mt-0 mt-12'>
               <div className='flex flex-col gap-2'>
                 <h3 className='text-base md:text-lg font-Montserrat font-bold mb-4'>EXPLORE MORE</h3>
-                <Link className='text-base xl:text-lg' href="/">Home</Link>
-                <Link className='text-base xl:text-lg' href="/aboutUs">About Us</Link>
-                <Link className='text-base xl:text-lg' href="/#sec4">Rates</Link>
+                <HardReloadLink className='text-base xl:text-lg' href="/">Home</HardReloadLink>
+                <HardReloadLink className='text-base xl:text-lg' href="/aboutUs">About Us</HardReloadLink>
+                <HardReloadLink className='text-base xl:text-lg' href="/#sec4">Rates</HardReloadLink>
                 <HardReloadLink 
                   className='text-base xl:text-lg' 
                   href="/contacts" 

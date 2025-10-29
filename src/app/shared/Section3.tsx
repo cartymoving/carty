@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
+import HardReloadLink from './HardReloadLink'
 
 export default async function Section3(){
   return(
@@ -13,12 +13,12 @@ export default async function Section3(){
             <p className='text-mygreen font-bold font-Hind text-2xl mt-10'>About Us</p>
             <h1 className='text-mywhite font-bold font-Montserrat text-[2rem] md:text-5xl 3xl:text-[4rem] mt-4 mb-6 md:mb-12'>Why Carty Movers Is Your Best Choice</h1>
             <p className='text-mywhite font-Hind font-medium text-sm md:text-lg mb-8 md:mb-16'>At Carty Moving Company, we don’t just move boxes; we move lives. Our mission is to provide moving services that cater to your needs, ensuring a smooth transition to your new location. Trust us to handle your move with care, efficiency, and professionalism.</p>
-            <Link href="/aboutUs" className='quote w-fit flex justify-center gap-2 px-4 text-xs items-center md:text-base py-2 xl:py-[15px] xl:px-7 bg-mygreen mr-4 md:hover:bg-mywhite border-mygreen border-2 rounded-md font-Montserrat text-mywhite  md:hover:text-mygreen font-bold transition-all'>
+            <HardReloadLink href="/aboutUs" className='quote w-fit flex justify-center gap-2 px-4 text-xs items-center md:text-base py-2 xl:py-[15px] xl:px-7 bg-mygreen mr-4 md:hover:bg-mywhite border-mygreen border-2 rounded-md font-Montserrat text-mywhite  md:hover:text-mygreen font-bold transition-all'>
               READ MORE
               <svg width="9" height="12" viewBox="0 0 9 12" fill="none" xmlns="http://www.w3.org/2000/svg" className='mb-1'>
                 <path d="M9 6L-4.89399e-07 11.1962L-3.51373e-08 0.803847L9 6Z" fill="#F6F9FC"/>
               </svg>
-            </Link>
+            </HardReloadLink>
           </div>
           <div className='w-[calc(50%-3.75vw)] relative lg:block hidden'>
             <Image src="/sec3_1.png" width="434" height="529" alt='Worker help' unoptimized={true} className='w-full h-full object-[40%] lg:block hidden object-cover container rounded-lg'/>
